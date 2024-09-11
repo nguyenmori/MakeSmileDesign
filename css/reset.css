@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  /*デフォルトの文字色、font-familyを予め当てておく*/
+  color: #1f1e00;
+  font-family: "Zen Maru Gothic", serif, "ヒラギノ丸ゴ Pro W4",
+    "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
+}
+
+a {
+  /*下線を消す*/
+  text-decoration: none;
+  /*色を消す*/
+  color: inherit;
+}
+
+ul {
+  /*左の「・」を消す*/
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  border: none;
+}
+
+body {
+  background-image: url(../image/背景@2x-100.jpg);
+  background-size: auto;
+  background-repeat:repeat;
+  background-position: center center;
+}
+
+.main_container,
+.concept,
+.Works_container,
+.contact_container{
+  max-width: 1100px;
+  margin: 100px auto;
+}
+
+.nico{
+  width: 56px;
+}

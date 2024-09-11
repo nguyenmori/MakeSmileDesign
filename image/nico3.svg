@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 57">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 1px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #1f1e00;
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-3 {
+        fill: #fed44f;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        fill: #f58196;
+      }
+
+      .cls-3 {
+        stroke-linejoin: round;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <g id="_アイデア" data-name="アイデア">
+    <g id="_ニコちゃん" data-name="ニコちゃん">
+      <circle class="cls-1" cx="28.5" cy="28.5" r="28"/>
+      <line class="cls-3" x1="19.92" y1="22.45" x2="19.92" y2="28.62"/>
+      <line class="cls-3" x1="35.73" y1="22.45" x2="35.73" y2="28.62"/>
+      <path class="cls-2" d="M12.71,38.06c.62.82,5.9,7.53,15.07,7.66,8.53.12,14.36-6.79,15.14-7.66"/>
+      <circle class="cls-4" cx="10.02" cy="34.22" r="3.06"/>
+      <circle class="cls-4" cx="45.98" cy="34.22" r="3.06"/>
+    </g>
+  </g>
+</svg>

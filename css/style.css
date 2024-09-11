@@ -1,0 +1,303 @@
+@charset "UTF-8";
+
+/* ヘッダー */
+.header {
+  background-color: #fff9e5;
+}
+
+.header .LOGO {
+  width: 136px;
+}
+
+/* MV */
+.main_visual {
+  background-color: #fff9e5;
+}
+
+.MV_img {
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.MV_img img {
+  position: relative;
+}
+
+.MV_text {
+  display: flex;
+}
+
+.MV_text span {
+  font-size: 40px;
+  line-height: 1.4;
+  background-color: #fff;
+}
+
+/* MVのテキスト部分 */
+.MV_text span:first-child {
+  position: absolute;
+  top: 280px;
+  left: 200px;
+}
+.MV_text span:nth-child(2) {
+  position: absolute;
+  top: 360px;
+  left: 200px;
+}
+.MV_text span:last-child {
+  position: absolute;
+  top: 440px;
+  left: 200px;
+}
+
+/* MV下の装飾 */
+.main_visual p img {
+  background-color: #f58196;
+  height: 94px;
+}
+
+/* About MeとWorks */
+.main_container {
+  display: flex;
+  gap: 40px;
+}
+
+.banner_box {
+  width: 520px;
+  height: 520px;
+  background-color: #fff;
+  border: 1px solid #1f1e00;
+  border-radius: 52px;
+}
+
+.banner_box h2 a .img {
+  display: block;
+  width: 420px;
+  height: 420px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+/* concept */
+.concept {
+  background-color: #fff9e5;
+  border: 5px double #1f1e00;
+  border-radius: 28px;
+  box-sizing: border-box;
+  padding: 60px 10px;
+  position: relative;
+}
+
+.concept_text p {
+  font-size: 24px;
+  text-align: center;
+  line-height: 2;
+}
+
+.nico {
+  display: flex;
+  position: absolute;
+}
+
+/* 制作実績TOP一覧 */
+/* .Works_container {
+  background-color: #f58196;
+} */
+
+.Works {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.works_box {
+  width: 300px;
+}
+
+.works_img {
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  border: 1px solid #1f1e00;
+  border-radius: 30px;
+}
+
+.works_img img {
+  width: 242px;
+  height: 242px;
+  display: block;
+  margin: auto;
+  padding: 29px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 24px 0 10px 0;
+}
+
+.key p {
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #fff;
+  border: 1px solid #1f1e00;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 4px 8px;
+}
+
+/* 制作実績一覧ページ遷移ボタン */
+.Works_btn {
+  border-bottom: 2px solid#1f1e00;
+  width: 498px;
+  margin: 50px auto;
+  padding: 16px;
+}
+
+.Works_btn a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Works_btn_text {
+  width: 284px;
+}
+
+.Works_btn_arrow {
+  width: 36px;
+}
+
+/* contact */
+.contact_container {
+  background-color: #f58196;
+  border: 5px double #fff;
+  height: 360px;
+  border-radius: 50px;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+
+/* contactテキスト部分 */
+.contact_text {
+  /* background-color: antiquewhite; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact_text h2 img {
+  display: block;
+  width: 296px;
+  margin-bottom: 26px;
+}
+
+.contact_container p {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* （FAQ）contactページ遷移ボタン */
+.faq_btn {
+  /* background-color: antiquewhite; */
+  border-bottom: 2px solid #fff;
+  width: 264px;
+}
+
+.faq_btn a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.faq_btn_text {
+  width: 140px;
+}
+
+.faq_btn_arrow {
+  width: 20px;
+}
+
+/* contactイラスト部分 */
+.contact_illust {
+  background-color: #c7eaee;
+  border: 8px solid #fff;
+  border-radius: 42px;
+  display: flex;
+  width: 466px;
+}
+
+.contact_link img {
+  display: block;
+  width: 20px;
+}
+
+.contact_illust img {
+  width: 20px;
+}
+/* 検索窓 */
+.search {
+  background-color: #fff;
+  width: 166px;
+  height: 166px;
+  border-radius: 50%;
+  margin: 48px auto;
+}
+
+.glass {
+  display: block;
+  width: 76px;
+  margin: auto;
+  padding-top: 45px;
+}
+
+/* フッター */
+.footer {
+  background-color: #fff9e5;
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 8%;
+}
+
+.footer_nav {
+  /* background-color: #c7eaee; */
+  display: flex;
+  gap: 72px;
+}
+
+.footer_nav ul {
+  display: flex;
+  gap: 72px;
+  align-items: center;
+}
+
+.footer_nav li {
+  font-size: 20px;
+}
+
+.sns_box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sns {
+  width: 40px;
+}
+
+.footer_right {
+  /* background-color: #c7eaee; */
+  display: flex;
+  align-items: flex-end;
+  gap: 60px;
+}
+
+.top_page {
+  width: 18px;
+}
