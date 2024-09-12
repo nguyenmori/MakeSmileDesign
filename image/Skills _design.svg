@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #71cac6;
+      }
+
+      .cls-2 {
+        fill: #fee288;
+        stroke-width: 1.6px;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke: #1f1e00;
+      }
+
+      .cls-2, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        fill: #f58196;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: bevel;
+        stroke-width: 2.33px;
+      }
+    </style>
+  </defs>
+  <g id="About_PC">
+    <g id="_スキル" data-name="スキル">
+      <g>
+        <circle class="cls-5" cx="140" cy="140" r="140"/>
+        <g id="_デザイン" data-name="デザイン">
+          <ellipse id="_楕円ツール" data-name="楕円ツール" class="cls-2" cx="127.87" cy="174.65" rx="84.6" ry="52"/>
+          <g id="_ペンツール" data-name="ペンツール">
+            <path class="cls-3" d="M114.58,238.17c-7.01-.48-24.53-7.52-7.37-53.45,5.9-15.79-7.37-25.37-7.37-25.37"/>
+            <g>
+              <path class="cls-4" d="M136.23,187.44l-22.89,48.61,2.62,3.2,17.5-17.5s-.91-2.66,2.38-4.6c3.69-2.17,8.24.56,7.33,5.12-.91,4.57-5.12,3.5-5.12,3.5l-18.36,16.64,3.73,3.73,46.44-19.34,12.33-25.35-22.09-22.94-23.88,8.94Z"/>
+              <polygon class="cls-4" points="162.15 177.03 183.88 198.76 193.21 191.76 171.26 169.81 162.15 177.03"/>
+            </g>
+          </g>
+          <g id="_バウンディングボックス" data-name="バウンディングボックス">
+            <rect class="cls-1" x="217.04" y="52.74" width="7.08" height="7.08"/>
+            <rect class="cls-1" x="174.56" y="52.74" width="7.08" height="7.08"/>
+            <rect class="cls-1" x="133.33" y="52.74" width="7.08" height="7.08"/>
+            <rect class="cls-1" x="133.33" y="94.04" width="7.08" height="7.08"/>
+            <rect class="cls-1" x="132.07" y="135.35" width="7.08" height="7.08"/>
+            <rect class="cls-1" x="174.56" y="135.35" width="7.08" height="7.08"/>
+            <rect class="cls-1" x="217.04" y="135.35" width="7.08" height="7.08"/>
+            <rect class="cls-1" x="217.04" y="94.04" width="7.08" height="7.08"/>
+            <path class="cls-1" d="M218.82,56.87v81.44h-81.44V56.87h81.44M220.58,55.1h-84.97v84.97h84.97V55.1h0Z"/>
+          </g>
+          <polygon id="_移動ツール" data-name="移動ツール" class="cls-6" points="77.42 79.94 79.99 152.64 99.45 137.96 122.25 137.15 77.42 79.94"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

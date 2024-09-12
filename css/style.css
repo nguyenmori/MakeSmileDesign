@@ -3,10 +3,15 @@
 /* ヘッダー */
 .header {
   background-color: #fff9e5;
+  position: relative;
 }
 
 .header .LOGO {
   width: 136px;
+  position: absolute;
+  top: 100%;
+  right: 45%;
+  z-index: 100;
 }
 
 /* MV */
@@ -16,7 +21,7 @@
 
 .MV_img {
   text-align: center;
-  padding-bottom: 80px;
+  padding: 80px;
 }
 
 .MV_img img {
@@ -131,7 +136,7 @@
   padding: 29px;
 }
 
-h3 {
+h4 {
   font-size: 24px;
   font-weight: 500;
   margin: 24px 0 10px 0;

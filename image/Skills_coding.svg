@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        stroke-width: 8.51px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+        stroke: #71cac6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-3 {
+        stroke-width: 10px;
+      }
+    </style>
+  </defs>
+  <g id="About_PC">
+    <g id="_スキル" data-name="スキル">
+      <g>
+        <circle class="cls-1" cx="140" cy="140" r="140"/>
+        <g id="_コーディング" data-name="コーディング">
+          <polyline class="cls-3" points="86.98 177.65 51.98 137.35 92.29 102.35"/>
+          <polyline class="cls-3" points="193.02 177.65 228.02 137.35 187.71 102.35"/>
+          <line class="cls-2" x1="151.14" y1="102.35" x2="124.15" y2="177.65"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
