@@ -42,18 +42,20 @@ img {
 body {
   background-image: url(../image/background@2x-100.jpg);
   background-size: auto;
-  background-repeat:repeat;
+  background-repeat: repeat;
   background-position: center center;
 }
 
 .main_container,
 .concept,
 .Works_container,
-.contact_container{
+.contact_container,
+.AboutMe,
+.Skills {
   max-width: 1100px;
   margin: 100px auto;
 }
 
-.nico{
+.nico {
   width: 56px;
 }

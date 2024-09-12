@@ -306,3 +306,58 @@ h4 {
 .top_page {
   width: 18px;
 }
+
+/* About Me */
+/* .AboutMe {
+  background: #f58196;
+} */
+
+.AboutMe_title {
+  display: flex;
+  gap: 24px;
+  align-items: baseline;
+  margin-bottom: 80px;
+}
+
+.AboutMe_title h2 img {
+  width: 342px;
+}
+.AboutMe_title p {
+  font-size: 36px;
+  color: #f58196;
+  text-shadow: 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff,
+    -1px -1px 1px #fff;
+}
+
+.AboutMe_container {
+  background-color: #fff9e5;
+  border-radius: 54px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 0 0 0 10% ;
+}
+
+.aboutme_text {
+  background-color: #f58196;
+  margin-top: 118px;
+  margin: 92px;
+}
+
+.name h3 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.aboutme_text p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.icon img {
+  display: block;
+  width: 300px;
+  border-radius: 50%;
+  margin-top: 54px;
+  margin-bottom: 260px;
+}
