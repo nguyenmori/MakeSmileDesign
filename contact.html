@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,43 +13,56 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header>
 
+<body>
+  <header class="contact_page_header">
+    <div class="contact_LOGO">
+      <h1><a href="./index.html"><img src="./image/Logo.svg" alt="makesmiledesign"></a></h1>
+    </div>
   </header>
-  <main>
+  <main id="contact" class="contact_page_container">
     <div class="contact_title">
-      <h2><img src="" alt="Contact"></h2>
+      <h2><img src="image/contact_pink.svg" alt="Contact"></h2>
       <p>お問い合わせ</p>
     </div>
     <div class="contact_message">
       <p>お客さまに寄り添ったご提案・制作を行わせていただいております。<br>
         制作のご依頼・ご相談はXのDMもしくはこちらからお問い合わせください。</p>
     </div>
-    <div class="form_content">
-      <label for="name">名前(フルネーム)</label>
-      <p></p>
-    </div>
-    <div class="form_content">
-      <label for="name">メールアドレス</label>
-      <p></p>
-    </div>
-    <div class="form_content">
-      <label for="name">ご依頼・ご相談</label>
-      <p></p>
-    </div>
-    <div class="form_content">
-      <label for="name">お問い合わせ内容</label>
-      <p></p>
-    </div>
-    <div class="contact_bottom">
+    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSefNUW1NaDfvzQcCcOqfSdPYvcZra20nEZFZy0FKM3uX79ZWA/formResponse" method="post" class="form_content_box">
+      <div class="form_content">
+        <label for="name">名前(フルネーム)</label>
+        <input name="entry.8962149" placeholder="株式会社 山田太郎" type="text">
+      </div>
+      <div class="form_content">
+        <label for="name">メールアドレス</label>
+        <input name="entry.87153924" placeholder="Sample@gmail.com"
+        type="email">
+      </div>
+      <div class="form_content">
+        <label for="name">ご依頼・ご相談</label>
+        <select name="entry.1348482163">
+          <option>ご依頼</option>
+          <option>ご相談</option>
+          <option>その他</option>
+        </select>
+      </div>
+      <div class="form_content">
+        <label for="name">お問い合わせ内容</label>
+        <textarea name="entry.1941474020" id="" cols="30" rows="10" placeholder="お問い合わせ内容"></textarea>
+      </div>
       <div class="send_btn">
         <button type="submit"><img src="./image/plane.svg" alt=""></button>
       </div>
+    </form>
+    <!-- <div class="contact_bottom">
+      <div class="send_btn">
+        <button type="submit"></button>
+      </div>
       <p>お問い合わせありがとうございます。<br>
         お返事にお時間頂戴します。素敵な出会いに感謝です。
-        </p>
-    </div>
+      </p>
+    </div> -->
   </main>
   <footer class="footer">
     <div class="footer_nav">
@@ -70,4 +84,5 @@
     </div>
   </footer>
 </body>
+
 </html>

@@ -14,18 +14,6 @@
   z-index: 100;
 }
 
-/* MV */
-.main_visual {
-  background-color: #fff9e5;
-}
-
-.MV_img {
-  width: 1100px;
-  padding: 40px 80px 80px 80px;
-  margin: auto;
-  position: relative;
-}
-
 .daily_welcome {
   background-color: #fff9e5;
   display: flex;
@@ -65,6 +53,27 @@
   margin-left: 8px;
   position: relative;
   overflow: hidden;
+}
+
+.contact_page_header {
+  background-color: #fff9e5;
+  padding: 60px;
+}
+
+.contact_LOGO {
+  width: 136px;
+}
+
+/* MV */
+.main_visual {
+  background-color: #fff9e5;
+}
+
+.MV_img {
+  width: 1100px;
+  padding: 40px 80px 80px 80px;
+  margin: auto;
+  position: relative;
 }
 
 /* MVテキスト部分 */
@@ -380,7 +389,6 @@ h3 {
   width: 76px;
   margin: auto;
   padding-top: 45px;
-  position: relative;
 }
 
 /* フッター */
@@ -675,4 +683,83 @@ h3 {
 
 .Works_images img {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* コンタクトフォームページ */
+.contact_title {
+  display: flex;
+  gap: 24px;
+  align-items: baseline;
+  margin-bottom: 64px;
+}
+
+.contact_title h2 {
+  width: 296px;
+}
+
+.contact_message p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.form_content_box {
+  margin: 112px auto;
+}
+
+/* フォームの中身 */
+.form_content {
+  display: flex;
+  margin-bottom: 92px;
+  gap: 100px;
+  justify-content: space-between;
+}
+
+.form_content label {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.form_content label::before {
+  content: "◎";
+}
+
+.form_content label::after {
+  content: "＊";
+  color: #f5022e;
+}
+
+.form_content input,
+.form_content textarea,
+.form_content select {
+  background-color: #fff;
+  width: 524px;
+  border: 1px solid #1f1e00;
+  border-radius: 16px;
+  box-sizing: border-box;
+  padding: 4px 16px 4px 16px;
+}
+
+.send_btn {
+  text-align: center;
+}
+
+.send_btn button {
+  background-color: #ebf7f9;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 1px solid #1f1e00;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.send_btn button:hover {
+  background-color: #c7eaee;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+button img {
+  width: 126px;
 }

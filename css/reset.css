@@ -58,7 +58,8 @@ body {
 .Works_container,
 .contact_container,
 .AboutMe,
-.Skills {
+.Skills,
+.contact_page_container {
   max-width: 1100px;
   margin: 100px auto;
 }
