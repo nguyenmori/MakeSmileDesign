@@ -5,6 +5,7 @@ body,
 h1,
 h2,
 h3,
+h4,
 p,
 dl,
 dt,
@@ -46,6 +47,12 @@ body {
   background-position: center center;
 }
 
+.header_left{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
 .main_container,
 .concept,
 .Works_container,
@@ -58,4 +65,8 @@ body {
 
 .nico {
   width: 56px;
+}
+
+.Works_container li h4:before{
+  content: "◎";
 }

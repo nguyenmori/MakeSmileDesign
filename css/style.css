@@ -20,39 +20,78 @@
 }
 
 .MV_img {
-  text-align: center;
-  padding: 80px;
-}
-
-.MV_img img {
+  width: 1100px;
+  padding: 40px 80px 80px 80px;
+  margin: auto;
   position: relative;
 }
 
-.MV_text {
+.daily_welcome {
+  background-color: #fff9e5;
+  display: flex;
+  padding-left: 16px;
+}
+
+.date {
+  display: flex;
+  gap: 8px;
+}
+
+.date .year {
+  font-size: 12px;
+  transform: rotate(90deg);
+}
+
+.date .month_date {
+  font-size: 26px;
+}
+
+.date .day_of_week {
+  font-size: 12px;
+  transform: rotate(-90deg);
+}
+
+.welcome_text {
+  background: #fff;
+  width: 170px;
+  height: 26px;
+  border: 1px solid #f58196;
+  border-radius: 26px;
   display: flex;
 }
 
-.MV_text span {
-  font-size: 40px;
-  line-height: 1.4;
-  background-color: #fff;
+.welcome_text img {
+  width: 58px;
+  margin-left: 8px;
+  position: relative;
+  overflow: hidden;
 }
 
-/* MVのテキスト部分 */
-.MV_text span:first-child {
-  position: absolute;
-  top: 280px;
-  left: 200px;
+/* MVテキスト部分 */
+.MV_img span {
+  background-color: #fff;
+  font-size: 40px;
+  display: inline-block;
+  padding: 16px;
+  margin-left: 80px;
 }
-.MV_text span:nth-child(2) {
+
+.MV_img span:first-child {
   position: absolute;
-  top: 360px;
-  left: 200px;
+  top: 240px;
+  left: 20px;
 }
-.MV_text span:last-child {
+
+.MV_img span:nth-child(2) {
   position: absolute;
-  top: 440px;
-  left: 200px;
+  top: 332px;
+  left: 20px;
+}
+
+.MV_img span:last-child {
+  position: absolute;
+  top: 424px;
+  left: 20px;
 }
 
 /* MV下の装飾 */
@@ -65,6 +104,7 @@
 .main_container {
   display: flex;
   gap: 40px;
+  justify-content: space-between;
 }
 
 .banner_box {
@@ -86,11 +126,17 @@
 /* concept */
 .concept {
   background-color: #fff9e5;
-  border: 5px double #1f1e00;
+  border: 4px solid #1f1e00;
   border-radius: 28px;
   box-sizing: border-box;
-  padding: 60px 10px;
-  position: relative;
+  padding: 4px;
+}
+
+.concept_text {
+  background-color: #fff9e5;
+  border: 1px solid #1f1e00;
+  border-radius: 22px;
+  padding: 60px 10px 20px 10px;
 }
 
 .concept_text p {
@@ -101,13 +147,9 @@
 
 .nico {
   display: flex;
-  position: absolute;
 }
 
 /* 制作実績TOP一覧 */
-/* .Works_container {
-  background-color: #f58196;
-} */
 
 .Works {
   display: flex;
@@ -136,10 +178,10 @@
   padding: 29px;
 }
 
-h4 {
+h3 {
   font-size: 24px;
   font-weight: 500;
-  margin: 24px 0 10px 0;
+  margin: 24px 0px 10px 8px;
 }
 
 .key p {
@@ -147,10 +189,12 @@ h4 {
   font-weight: 400;
   background-color: #fff;
   border: 1px solid #1f1e00;
-  border-radius: 50%;
+  border-radius: 22px;
   display: inline-block;
-  padding: 8px 16px;
-  margin: 4px 8px;
+  padding: 4px 0;
+  margin: 4px 4px;
+  width: 80px;
+  text-align: center;
 }
 
 /* 制作実績一覧ページ遷移ボタン */
@@ -178,13 +222,22 @@ h4 {
 /* contact */
 .contact_container {
   background-color: #f58196;
-  border: 5px double #fff;
-  height: 360px;
+  border: 4px solid #fff;
+  height: 380px;
   border-radius: 50px;
-  padding: 48px 40px;
+  margin-bottom: 100px;
+  box-sizing: border-box;
+  padding: 4px;
+}
+
+.border {
+  background-color: #f58196;
+  border: 1px solid #fff;
+  border-radius: 44px;
+  padding: 40px;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 /* contactテキスト部分 */
@@ -193,6 +246,7 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 60px;
 }
 
 .contact_text h2 img {
@@ -227,6 +281,7 @@ h4 {
 
 .faq_btn_arrow {
   width: 20px;
+  margin-bottom: 12px;
 }
 
 /* contactイラスト部分 */
@@ -234,25 +289,90 @@ h4 {
   background-color: #c7eaee;
   border: 8px solid #fff;
   border-radius: 42px;
-  display: flex;
   width: 466px;
+  height: 264px;
+  position: relative;
 }
 
 .contact_link img {
   display: block;
-  width: 20px;
+  width: 162px;
+  position: relative;
+  top: 25%;
+  left: 35%;
+  z-index: 50;
+}
+.contact_illust .balloon1 {
+  width: 60px;
+  position: absolute;
+  top: 20px;
+  left: 80px;
+}
+.contact_illust .balloon2 {
+  width: 88px;
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  z-index: 2;
+}
+.contact_illust .cloud {
+  width: 148px;
+  position: absolute;
+  top: 23%;
+  right: 9%;
+  z-index: 1;
+}
+.contact_illust .cloud2 {
+  width: 94px;
+  position: absolute;
+  bottom: 10px;
+  left: 110px;
+}
+.contact_illust .cloud3 {
+  width: 148px;
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+}
+.contact_illust .cloud4 {
+  width: 94px;
+  position: absolute;
+  top: 10%;
+  left: 42%;
+}
+.contact_illust .Sun {
+  width: 96px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
 }
 
-.contact_illust img {
-  width: 20px;
-}
 /* 検索窓 */
 .search {
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-image: url(../image/make_smile_circle.svg);
   width: 166px;
   height: 166px;
   border-radius: 50%;
   margin: 48px auto;
+  position: sticky;
+  left: 45%;
+  bottom: 3%;
+  z-index: 100;
+}
+
+/* 検索窓用アニメーション */
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.search {
+  animation: rotateCircle 30s linear infinite;
 }
 
 .glass {
@@ -260,6 +380,7 @@ h4 {
   width: 76px;
   margin: auto;
   padding-top: 45px;
+  position: relative;
 }
 
 /* フッター */
@@ -307,22 +428,28 @@ h4 {
   width: 18px;
 }
 
-/* About Me */
+/*----------------- About Me---------------- */
 /* .AboutMe {
   background: #f58196;
 } */
 
-.AboutMe_title {
+.AboutMe_title,
+.Skills_titel,
+.Works_title {
   display: flex;
   gap: 24px;
   align-items: baseline;
   margin-bottom: 80px;
+  margin-left: 45px;
 }
 
 .AboutMe_title h2 img {
   width: 342px;
 }
-.AboutMe_title p {
+
+.AboutMe_title p,
+.Skills_titel p,
+.contact_title p {
   font-size: 36px;
   color: #f58196;
   text-shadow: 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff,
@@ -332,26 +459,32 @@ h4 {
 .AboutMe_container {
   background-color: #fff9e5;
   border-radius: 54px;
+  max-width: 900px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  padding: 0 0 0 10% ;
+  padding: 0 0 0 10%;
+  margin: 0 auto;
 }
 
 .aboutme_text {
-  background-color: #f58196;
+  /* background-color: #f58196; */
   margin-top: 118px;
   margin: 92px;
+  display: flex;
+  flex-direction: column;
 }
 
 .name h3 {
   font-size: 36px;
   font-weight: 500;
+  margin: 24px 0 10px -4px;
 }
 
 .aboutme_text p {
   font-size: 16px;
   line-height: 1.4;
+  padding-bottom: 64px;
 }
 
 .icon img {
@@ -360,4 +493,186 @@ h4 {
   border-radius: 50%;
   margin-top: 54px;
   margin-bottom: 260px;
+}
+
+/* スキル&ツール */
+.Skills {
+  margin-bottom: 140px;
+}
+
+.Skills_container {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 92px;
+}
+
+.Skills_titel h2 img {
+  width: 458px;
+}
+
+.Skills_box {
+  width: 520px;
+  height: 800px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px;
+}
+
+.design_box {
+  background-color: #fac0ca;
+}
+
+.coding_box {
+  background-color: #b8e4e2;
+}
+
+.Skills_box img {
+  display: block;
+  width: 280px;
+  margin-top: 32px;
+}
+
+.Skills_box h3 {
+  font-size: 36px;
+  font-weight: 400;
+  margin: 48px auto;
+}
+
+.Skills_box p {
+  font-size: 16px;
+  line-height: 2;
+}
+
+/* ツール部分 */
+.Tools_box {
+  /* display: flex; */
+  background-color: #fff;
+  text-align: left;
+}
+
+.Tools {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.Tools h4 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.Tools p {
+  border: 1px solid #1f1e00;
+  border-radius: 34px;
+  padding: 0 8px 2px 8px;
+  line-height: 24px;
+}
+
+/* -----------------------WORKS--------------------- */
+.Works_title {
+  padding-left: 0;
+}
+
+.Works_title h2 img {
+  width: 218px;
+}
+
+.Works_title p {
+  font-size: 36px;
+  color: #71cac6;
+  text-shadow: 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff,
+    -1px -1px 1px #fff;
+}
+
+/* ---------Works遷移ページ------------ */
+
+.Works_Content h3 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+.Works_content_block {
+  display: flex;
+  flex-direction: column;
+}
+
+.Works_small_block {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.Works_Content h4 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.Works_small_block:first-child h4,
+.Works_small_block:nth-child(3) h4 {
+  margin-right: 72px;
+}
+
+.Works_small_block:nth-child(2) h4 {
+  margin-right: 24px;
+}
+
+.Works_small_block p {
+  font-size: 24px;
+}
+
+.Works_small_block:nth-child(4) p {
+  display: inline;
+  padding: 8px 16px 12px 16px;
+  border-radius: 40px;
+  border: 1px solid#1f1e00;
+}
+
+.photoshop {
+  background-color: #8fd5dd;
+}
+
+.Illustrator {
+  background-color: #dc743b;
+}
+
+.Works_overview_point {
+  background-color: #fff9e5;
+  border: 4px solid #1f1e00;
+  border-radius: 50px;
+  padding: 4px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.Works_overview_point ul {
+  background-color: #fff9e5;
+  border: 2px solid #1f1e00;
+  border-radius: 44px;
+  padding: 40px 48px;
+}
+
+.Works_overview_point h4 {
+  margin-bottom: 24px;
+}
+
+.overview {
+  margin-bottom: 40px;
+}
+
+.Works_images h4 {
+  margin-bottom: 48px;
+}
+
+.Works_images ul {
+  display: flex;
+  gap: 48px;
+}
+
+.Works_images img {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
