@@ -565,6 +565,11 @@ h3 {
   align-items: baseline;
   gap: 16px;
   flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.coding_box .Tools {
+  margin-top: 140px;
 }
 
 .Tools h4 {
@@ -646,6 +651,26 @@ h3 {
 
 .Illustrator {
   background-color: #dc743b;
+}
+
+.Figma {
+  background: #af6ca7;
+}
+
+.Canva {
+  background-color: #c7eaee;
+}
+
+.VisualStudioCode {
+  background-color: #8fb1dd;
+}
+
+.STUDIO {
+  background-color: #f57096;
+}
+
+.GitHub {
+  background-color: #af58a5;
 }
 
 .Works_overview_point {
