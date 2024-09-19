@@ -39,20 +39,44 @@
   transform: rotate(-90deg);
 }
 
-.welcome_text {
+/* ようこそ　テキスト */
+
+@keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.scroll-infinity__wrap {
+  display: flex;
+  overflow: hidden;
   background: #fff;
   width: 170px;
   height: 26px;
   border: 1px solid #f58196;
   border-radius: 26px;
+}
+.scroll-infinity__list {
   display: flex;
+  list-style: none;
+  padding: 0;
+}
+.scroll-infinity__list--left {
+  animation: infinity-scroll-left 15s infinite linear 0.5s both;
+}
+.scroll-infinity__item {
+  width: calc(35vw / 6);
+}
+.scroll-infinity__item > img {
+  width: 100%;
 }
 
-.welcome_text img {
+.scroll-infinity__item img {
+  margin-top: 6px;
   width: 58px;
-  margin-left: 8px;
-  position: relative;
-  overflow: hidden;
+  height: auto;
 }
 
 .contact_page_header {
@@ -104,9 +128,22 @@
 }
 
 /* MV下の装飾 */
-.main_visual p img {
+.MV-scroll-infinity__wrap {
   background-color: #f58196;
+  width: 100%;
   height: 94px;
+  border-radius: 0px;
+}
+
+.MV-scroll-infinity__wrap .scroll-infinity__item {
+  width: calc(120vw / 6);
+}
+
+.MV-scroll-infinity__wrap .scroll-infinity__item img {
+  margin: 36px 0px;
+  width: 288px;
+  height: auto;
+  display: block;
 }
 
 /* About MeとWorks */
@@ -310,12 +347,14 @@ h3 {
   top: 25%;
   left: 35%;
   z-index: 50;
+  animation: fuwafuwa 3s ease-in-out infinite alternate;
 }
 .contact_illust .balloon1 {
   width: 60px;
   position: absolute;
   top: 20px;
   left: 80px;
+  animation: fuwafuwa 3s ease-in-out infinite alternate;
 }
 .contact_illust .balloon2 {
   width: 88px;
@@ -323,6 +362,7 @@ h3 {
   top: 80px;
   left: 20px;
   z-index: 2;
+  animation: fuwafuwa 3s ease-in-out infinite alternate;
 }
 .contact_illust .cloud {
   width: 148px;
@@ -354,6 +394,18 @@ h3 {
   position: absolute;
   top: 5%;
   right: 5%;
+}
+
+@keyframes fuwafuwa {
+  0% {
+    transform: translate(0, 0) rotate(-7deg);
+  }
+  50% {
+    transform: translate(0, -7px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(7deg);
+  }
 }
 
 /* 検索窓 */
@@ -413,6 +465,33 @@ h3 {
 
 .footer_nav li {
   font-size: 20px;
+}
+
+.footer_nav li:hover {
+  color: #f57096;
+}
+
+.footer_nav a {
+  position: relative;
+}
+
+.footer_nav a::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #f57096;
+  bottom: -10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.footer_nav a:hover::after {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
 }
 
 .sns_box {
