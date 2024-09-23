@@ -209,8 +209,9 @@
   color: #1f1e00;
   padding: 30px;
   font-family: "vdl-gigamarujr", sans-serif;
+
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 300;
 }
 
 .nav li:hover {
@@ -284,10 +285,10 @@
   height: 420px;
   margin: auto;
   padding-top: 50px;
-  transition-duration: .4s;
+  transition-duration: 0.4s;
 }
 
-.banner_box h2 a .img:hover{
+.banner_box h2 a .img:hover {
   transform: scale(0.9);
 }
 
@@ -311,8 +312,7 @@
   font-size: 24px;
   text-align: center;
   line-height: 2;
-  font-family: "vdl-gigamarujr", sans-serif;
-  font-weight: 500;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -339,7 +339,6 @@
   background-color: #fff;
   border: 1px solid #1f1e00;
   border-radius: 30px;
-  
 }
 
 .works_img img {
@@ -348,10 +347,10 @@
   display: block;
   margin: auto;
   padding: 29px;
-  transition-duration: .4s;
+  transition-duration: 0.4s;
 }
 
-.works_img img:hover{
+.works_img img:hover {
   transform: scale(0.9);
 }
 
@@ -389,8 +388,9 @@ h3 {
 }
 
 .Works_btn_text {
- font-size: 36px;
- font-family: "vdl-gigamarujr", sans-serif;
+  font-size: 36px;
+  font-family: "vdl-gigamarujr", sans-serif;
+  font-weight: 300;
 }
 
 .Works_btn_arrow {
@@ -427,11 +427,12 @@ h3 {
   gap: 60px;
 }
 
- h2 {
+h2 {
   font-size: 72px;
   color: #fff;
   margin-bottom: 26px;
   font-family: "vdl-gigamarujr", sans-serif;
+  font-weight: 300;
 }
 
 .contact_container p {
@@ -456,8 +457,9 @@ h3 {
 
 .faq_btn_text {
   font-size: 20px;
-  color:#fff;
+  color: #fff;
   font-family: "vdl-gigamarujr", sans-serif;
+  font-weight: 300;
 }
 
 .faq_btn_arrow {
@@ -665,10 +667,12 @@ h3 {
   margin-left: 45px;
 }
 
-.AboutMe_title h2 ,
-.Skills_titel h2 {
-color: #f58196;
-font-family: "vdl-gigamarujr", sans-serif;
+.AboutMe_title h2,
+.Skills_titel h2,
+.contact_title h2 {
+  color: #f58196;
+  font-family: "vdl-gigamarujr", sans-serif;
+  font-weight: 300;
 }
 
 .AboutMe_title p,
@@ -801,8 +805,9 @@ font-family: "vdl-gigamarujr", sans-serif;
   padding-left: 0;
 }
 
-.Works_title h2 img {
-  width: 218px;
+.Works_title h2 {
+  color: #71cac6;
+  font-weight: 300;
 }
 
 .Works_title p {
@@ -928,10 +933,6 @@ font-family: "vdl-gigamarujr", sans-serif;
   gap: 24px;
   align-items: baseline;
   margin-bottom: 64px;
-}
-
-.contact_title h2 {
-  width: 296px;
 }
 
 .contact_message p {

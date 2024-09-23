@@ -13,10 +13,68 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'fxx0ufx',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <header></header>
+  <header class="header">
+    <div class="header_left">
+      <div class="logo">
+        <h1><a href="#"><img src="image/Logo.svg" alt="Make Smile Design" class="LOGO"></a></h1>
+      </div>
+      <div class="daily_welcome">
+        <div class="date">
+          <p class="year">2024</p>
+          <p class="month_date"><span>9</span>.<span>15</span></p>
+          <p class="day_of_week">Sun.</p>
+        </div>
+        <div class="scroll-infinity">
+          <div class="scroll-infinity__wrap">
+            <ul class="scroll-infinity__list scroll-infinity__list--left">
+              <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
+              <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
+              <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
+              <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
+              <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
+              <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
+            </ul>
+            <ul class="scroll-infinity__list scroll-infinity__list--left">
+              <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
+              <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
+              <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
+              <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
+              <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
+              <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="nav_btn">
+        <span></span>
+      </div>
+      <nav class="nav open">
+        <ul>
+          <li><a href="./aboutme.html">About Me</a></li>
+          <li><a href="./Works.html">Works</a></li>
+          <li><a href="./contact.html">FAQ</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li class="sns_box"><a href="https://www.instagram.com/nguyenm_atz/" target="_blank"><img
+                src="image/Instagram.svg" alt="" class="sns"></a><a href="https://x.com/NgyenM_azt1412"
+              target="_blank"><img src="image/X.svg" alt="" class="sns"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <main>
     <section class="main_visual Works_content_MV">
       <div class="MV_img">
@@ -26,7 +84,7 @@
     </section>
     <section class="Works_container">
       <div class="Works_title">
-        <h2><img src="image/WORKS_title.svg" alt="Works"></h2>
+        <h2>Works</h2>
         <p>制作実績</p>
       </div>
       <div class="Works_Content">
@@ -86,14 +144,14 @@
       <div class="border">
         <div class="contact_text">
           <div class="contact_text_top">
-            <h2><img src="image/contact＋FAQ.svg" alt="Contact"></h2>
+            <h2>Contact</h2>
             <p>制作のご依頼・ご相談は<br>
               こちらからお問い合わせください。
             </p>
           </div>
           <div class="faq_btn">
             <a href="./contact.html">
-              <p class="faq_btn_text"><img src="image/FAQ_arrow_text.svg" alt="ご依頼について"></p>
+              <p class="faq_btn_text">ご依頼について</p>
               <p class="faq_btn_arrow"><img src="image/FAQ_arrow.svg" alt="→"></p>
             </a>
           </div>
