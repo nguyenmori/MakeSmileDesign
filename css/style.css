@@ -127,6 +127,91 @@
   left: 20px;
 }
 
+/* メニュー */
+.nav_btn {
+  display: block;
+  height: 23px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  /* 重なり具合 */
+  z-index: 2;
+}
+
+.nav_btn span {
+  display: block;
+  width: 33px;
+  height: 3px;
+  background: #f58196;
+  border-radius: 2px;
+  position: relative;
+  top: 10px;
+  transition: 0.3s;
+}
+
+.nav_btn span::before,
+.nav_btn span::after {
+  content: "";
+  display: block;
+  width: 33px;
+  height: 3px;
+  background: #f58196;
+  border-radius: 2px;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.nav_btn span::before {
+  bottom: 10px;
+}
+
+.nav_btn span::after {
+  top: 10px;
+}
+
+/* ばつ印 */
+.nav_btn.open span {
+  background: transparent;
+}
+
+.nav_btn.open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+.nav_btn.open span::after {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100vh;
+  background: #fff9e5;
+  /* 重なり具合 */
+  z-index: 1;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav ul li {
+  color: #1f1e00;
+  padding: 30px;
+  font-family: "vdl-gigamarujr", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
 /* MV下の装飾 */
 .MV-scroll-infinity__wrap {
   background-color: #f58196;
@@ -137,6 +222,7 @@
 
 .MV-scroll-infinity__wrap .scroll-infinity__item {
   width: calc(120vw / 6);
+  margin-left: 48px;
 }
 
 .MV-scroll-infinity__wrap .scroll-infinity__item img {
@@ -144,6 +230,9 @@
   width: 288px;
   height: auto;
   display: block;
+}
+.MV-scroll-infinity__wrap .scroll-infinity__list--left {
+  animation: infinity-scroll-left 25s infinite linear 0.5s both;
 }
 
 /* About MeとWorks */
@@ -189,6 +278,9 @@
   font-size: 24px;
   text-align: center;
   line-height: 2;
+  font-family: "vdl-gigamarujr", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .nico {

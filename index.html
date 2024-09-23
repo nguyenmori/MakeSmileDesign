@@ -13,6 +13,18 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'fxx0ufx',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -30,7 +42,7 @@
         <div class="scroll-infinity">
           <div class="scroll-infinity__wrap">
             <ul class="scroll-infinity__list scroll-infinity__list--left">
-              <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>                        
+              <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
               <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
               <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
               <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
@@ -38,7 +50,7 @@
               <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
             </ul>
             <ul class="scroll-infinity__list scroll-infinity__list--left">
-              <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>                        
+              <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
               <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
               <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
               <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
@@ -46,8 +58,22 @@
               <li class="scroll-infinity__item"><img src="./image/welcome_text.svg" /></li>
             </ul>
           </div>
-          </div>
+        </div>
       </div>
+      <div class="nav_btn">
+        <span></span>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="./aboutme.html">About Me</a></li>
+          <li><a href="./Works.html">Works</a></li>
+          <li><a href="./contact.html">FAQ</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li class="sns_box"><a href="https://www.instagram.com/nguyenm_atz/" target="_blank"><img
+                src="image/Instagram.svg" alt="" class="sns"></a><a href="https://x.com/NgyenM_azt1412"
+              target="_blank"><img src="image/X.svg" alt="" class="sns"></a></li>
+        </ul>
+      </nav>
     </div>
   </header>
   <main>
@@ -67,7 +93,7 @@
       <div class="scroll-infinity">
         <div class="scroll-infinity__wrap MV-scroll-infinity__wrap">
           <ul class="scroll-infinity__list scroll-infinity__list--left">
-            <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>                        
+            <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
             <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
             <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
             <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
@@ -75,7 +101,7 @@
             <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--left">
-            <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>                        
+            <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
             <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
             <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
             <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
@@ -83,8 +109,7 @@
             <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
           </ul>
         </div>
-        </div>
-      <!-- <p><img src="image/MakeSmileDesign.svg" alt=""></p> -->
+      </div>
     </section>
     <section class="main_container">
       <div class="banner_box">
@@ -251,6 +276,14 @@
       <a href="#"><img src="image/page＿Top.svg" alt="Topに戻る" class="top_page"></a>
     </div>
   </footer>
+  <script>
+    $(function () {
+      $('.nav_btn').on('click', function () {
+        $('.nav_btn').toggleClass('open');
+        $('.nav').fadeToggle();
+      })
+    })
+  </script>
 </body>
 
 </html>
