@@ -78,7 +78,26 @@
       <div class="MV_img">
         <img src="image/WORKERS LP　FV１.png" alt="">
       </div>
-      <p><img src="image/MakeSmileDesign.svg" alt=""></p>
+      <div class="scroll-infinity">
+        <div class="scroll-infinity__wrap MV-scroll-infinity__wrap">
+          <ul class="scroll-infinity__list scroll-infinity__list--left">
+            <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
+            <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
+            <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
+            <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
+            <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
+            <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
+          </ul>
+          <ul class="scroll-infinity__list scroll-infinity__list--left">
+            <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
+            <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
+            <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
+            <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
+            <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
+            <li class="scroll-infinity__item"><img src="./image/MakeSmileDesign.svg" /></li>
+          </ul>
+        </div>
+      </div>
     </section>
     <section class="Works_container">
       <div class="Works_title">
@@ -184,5 +203,13 @@
       <a href="#"><img src="image/page＿Top.svg" alt="Topに戻る" class="top_page"></a>
     </div>
   </footer>
+  <script>
+    $(function () {
+      $('.nav_btn').on('click', function () {
+        $('.nav_btn').toggleClass('open');
+        $('.nav').fadeToggle();
+      })
+    })
+  </script>
 </body>
 </html>

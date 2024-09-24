@@ -277,6 +277,7 @@
   background-color: #fff;
   border: 1px solid #1f1e00;
   border-radius: 52px;
+  position: relative;
 }
 
 .banner_box h2 a .img {
@@ -290,6 +291,102 @@
 
 .banner_box h2 a .img:hover {
   transform: scale(0.9);
+}
+
+.banner_box .around_text_box .around_text_block,
+.works_img .around_text_box .around_text_block {
+  font-size: 1rem;
+  align-items: center;
+  aspect-ratio: 690 / 71;
+  -webkit-clip-path: polygon(6% 0, 94% 0, 103.5% 100%, -3.5% 100%);
+  clip-path: polygon(6% 0, 94% 0, 103.5% 100%, -3.5% 100%);
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  position: absolute;
+  width: 93%;
+}
+
+.banner_box .around_text_box .around_text_block p,
+.works_img .around_text_box .around_text_block p {
+  align-items: center;
+  -webkit-animation: frame 8s linear 0s infinite;
+  animation: frame 8s linear 0s infinite;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 300%;
+  font-family: "vdl-gigamarujr", sans-serif;
+  font-weight: 300;
+}
+
+.banner_box.Works_banner .around_text_box .around_text_block p {
+  -webkit-animation: frame 8s linear 0s infinite;
+  animation: frame 8s linear 0s infinite;
+}
+
+.banner_box .around_text_box .around_text_block p span,
+.works_img .around_text_box .around_text_block p span {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 33.3333333333%;
+  color: #f57096;
+}
+
+.banner_box .around_text_box .around_text_block.block1,
+.works_img .around_text_box .around_text_block.block1 {
+  left: 3.5%;
+  rotate: 180deg;
+  top: 0;
+}
+
+.banner_box .around_text_box .around_text_block.block2,
+.works_img .around_text_box .around_text_block.block2 {
+  bottom: 96.5%;
+  right: 0;
+  rotate: -90deg;
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
+.banner_box .around_text_box .around_text_block.block3,
+.works_img .around_text_box .around_text_block.block3 {
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+}
+
+.banner_box .around_text_box .around_text_block.block4,
+.works_img .around_text_box .around_text_block.block4 {
+  bottom: 96.5%;
+  left: 0;
+  rotate: 90deg;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+@keyframes frame {
+  0% {
+    translate: 0 0;
+  }
+  25% {
+    translate: 0 0;
+  }
+  50% {
+    translate: -33.3% 0;
+  }
+  75% {
+    translate: -33.3% 0;
+  }
+  100% {
+    translate: -66.6% 0;
+  }
 }
 
 /* concept */
@@ -339,6 +436,7 @@
   background-color: #fff;
   border: 1px solid #1f1e00;
   border-radius: 30px;
+  position: relative;
 }
 
 .works_img img {
@@ -484,14 +582,14 @@ h2 {
   top: 25%;
   left: 35%;
   z-index: 50;
-  animation: fuwafuwa 3s ease-in-out infinite alternate;
+  animation: fuwafuwa 5s ease-in-out infinite alternate;
 }
 .contact_illust .balloon1 {
   width: 60px;
   position: absolute;
   top: 20px;
   left: 80px;
-  animation: fuwafuwa 3s ease-in-out infinite alternate;
+  animation: fuwafuwa 4s ease-in-out infinite alternate;
 }
 .contact_illust .balloon2 {
   width: 88px;
@@ -972,10 +1070,29 @@ h2 {
 .form_content select {
   background-color: #fff;
   width: 524px;
-  border: 1px solid #1f1e00;
+  border: 1px solid #71cac6;
   border-radius: 16px;
   box-sizing: border-box;
-  padding: 4px 16px 4px 16px;
+  padding: 8px 16px;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  line-height: normal;
+  color: #71cac6;
+  font-family: "Zen Maru Gothic", serif, "ヒラギノ丸ゴ Pro W4",
+    "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
+}
+
+select {
+  &:invalid {
+    color: #71cac6;
+  }
+  option[value=""] {
+    display: none;
+  }
 }
 
 .send_btn {
@@ -1000,4 +1117,43 @@ h2 {
 
 button img {
   width: 126px;
+}
+
+/* Thanksページ */
+
+.Thanks {
+  background-color: #fff;
+  border: 1px solid #f57096;
+  border-radius: 36px;
+  text-align: center;
+  margin: 200px auto 48px auto;
+  max-width: 1100px;
+  padding: 64px;
+}
+
+.Thanks h2 {
+  color: #f57096;
+}
+
+.Thanks p {
+  margin-top: 16px;
+  line-height: 1.4;
+  font-size: 24px;
+}
+
+.Thanks_page .for_top a {
+  display: block;
+  text-align: center;
+  margin: 0 auto 200px auto;
+  background-color: #71cac6;
+  width: 480px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 48px;
+  color: #fff;
+}
+
+.Thanks .for_top a:hover {
+  background-color: #fff;
+  border: 1px solid #71cac6;
 }

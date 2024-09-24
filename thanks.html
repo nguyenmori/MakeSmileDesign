@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>お問い合わせ</title>
+  <meta name="description" content="">
+  <title>MakeSmileDesign</title>
   <link rel="icon" href="image/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,9 +23,8 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
-
 <body>
   <header class="contact_page_header">
     <div class="contact_LOGO">
@@ -45,61 +45,22 @@
       </ul>
     </nav>
   </header>
-  <main id="contact" class="contact_page_container">
-    <div class="contact_title">
-      <h2>Contact</h2>
-      <p>お問い合わせ</p>
-    </div>
-    <div class="contact_message">
-      <p>お客さまに寄り添ったご提案・制作を行わせていただいております。<br>
-        制作のご依頼・ご相談はXのDMもしくはこちらからお問い合わせください。</p>
-    </div>
-    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSefNUW1NaDfvzQcCcOqfSdPYvcZra20nEZFZy0FKM3uX79ZWA/formResponse" class="form_content_box"
-    method="POST"
-    target="hidden_iframe"
-    onsubmit="submitted=true;">
-      <div class="form_content">
-        <label for="name">名前(フルネーム)</label>
-        <input name="entry.8962149" placeholder="株式会社 山田太郎" type="text" required>
-      </div>
-      <div class="form_content">
-        <label for="name">メールアドレス</label>
-        <input name="entry.87153924" placeholder="Sample@gmail.com"
-        type="email" required>
-      </div>
-      <div class="form_content">
-        <label for="name">ご依頼・ご相談</label>
-        <select name="entry.1348482163" required>
-          <option value="">選択してください</option>
-          <option value="ご依頼">ご依頼</option>
-          <option value="ご相談">ご相談</option>
-          <option value="その他">その他</option>
-        </select>
-      </div>
-      <div class="form_content">
-        <label for="name">お問い合わせ内容</label>
-        <textarea name="entry.1941474020" id="" cols="30" rows="10" placeholder="お問い合わせ内容" required></textarea>
-      </div>
-      <div class="send_btn">
-        <button type="submit"><img src="./image/plane.svg" alt=""></button>
-      </div>
-    </form>
-    <!-- <div class="contact_bottom">
-      <div class="send_btn">
-        <button type="submit"></button>
-      </div>
+  <main class="Thanks_page">
+    <div  class="Thanks">
+      <h2>Thanks for you.</h2>
       <p>お問い合わせありがとうございます。<br>
-        お返事にお時間頂戴します。素敵な出会いに感謝です。
-      </p>
-    </div> -->
+        お返事に1日~3日お時間頂戴します。
+        素敵な出会いに感謝です。</p>
+    </div>
+    <p class="for_top"><a href="./index.html">TOPページへ戻る</a></p>
   </main>
   <footer class="footer">
     <div class="footer_nav">
       <ul>
         <li><a href="./aboutme.html">About Me</a></li>
         <li><a href="./Works.html">Works</a></li>
-        <li><a href="">FAQ</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="./contact.html">FAQ</a></li>
+        <li><a href="./contact.html">Contact</a></li>
       </ul>
       <div class="sns_box">
         <p><a href="https://www.instagram.com/nguyenm_atz/" target="_blank"><img src="image/Instagram.svg"
@@ -109,7 +70,7 @@
     </div>
     <div class="footer_right">
       <small>©︎ MAKE SMILE DESIGN All Rights Reserved.</small>
-      <a href="#"><img src="image/page＿Top.svg" alt="Topに戻る" class="top_page"></a>
+      <a href="./index.html"><img src="image/page＿Top.svg" alt="Topに戻る" class="top_page"></a>
     </div>
   </footer>
   <script>
@@ -120,15 +81,6 @@
       })
     })
   </script>
-  <script type="text/javascript">
-    let submitted = false;
-</script>
-<iframe
-    name="hidden_iframe"
-    id="hidden_iframe"
-    style="display: none"
-    onload="if(submitted){window.location='./thanks.html';}"
-></iframe>
 </body>
 
 </html>
