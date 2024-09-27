@@ -90,7 +90,6 @@ body {
   .concept,
   .Works_container,
   .contact_container {
-    max-width: 900px;
-    margin: 100px auto;
+    margin: 100px 10px;
   }
 }

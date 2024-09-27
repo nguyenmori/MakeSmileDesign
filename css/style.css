@@ -289,6 +289,73 @@
   }
 }
 
+/* SP版 */
+@media screen and (max-width: 800px) {
+  .header {
+    position: relative;
+  }
+
+  .header_left {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 30px;
+    padding-top: 24px;
+  }
+
+  .header .LOGO {
+    width: 80px;
+    position: static;
+  }
+
+  .daily_welcome {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .daily_welcome .scroll-infinity__wrap {
+    width: 45%;
+  }
+
+  .daily_welcome .scroll-infinity__item {
+    width: calc(35vw / 6);
+    margin-left: 8px;
+  }
+
+  .nav_btn {
+    top: 40px;
+    right: 40px;
+    /* 重なり具合 */
+    z-index: 2;
+  }
+
+  /* MV */
+  .prev,
+  .next {
+    width: 0px;
+    height: auto;
+  }
+
+  .MV_text {
+    font-size: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    bottom: 50%;
+    margin-left: 36px;
+  }
+  .MV-scroll-infinity__wrap {
+    height: 60px;
+  }
+  .MV-scroll-infinity__wrap .scroll-infinity__item {
+    width: calc(280vw / 6);
+    margin-left: 30px;
+  }
+  .MV-scroll-infinity__wrap .scroll-infinity__item img {
+    margin-top: 16px;
+  }
+}
+
 /* About MeとWorks */
 .main_container {
   display: flex;
@@ -438,6 +505,8 @@
 @media screen and (max-width: 980px) {
   .main_container {
     justify-content: space-around;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 
   .banner_box {
@@ -450,6 +519,19 @@
     top: -3%;
     left: 10%;
   }
+}
+
+@media screen and (max-width: 840px) {
+  .banner_box h2 a .img {
+    width: 300px;
+    height: 300px;
+    top: 0%;
+    left: 11%;
+  }
+}
+
+/* SP版 */
+@media screen and (max-width: 800px) {
 }
 
 /* concept */
@@ -631,19 +713,6 @@ h3 {
   text-align: center;
 }
 
-@media screen and (max-width: 1140px) {
-  .Works {
-    gap: 40px;
-  }
-}
-
-@media screen and (max-width: 980px) {
-  .Works {
-    justify-content: space-around;
-    gap: 40px;
-  }
-}
-
 /* 制作実績一覧ページ遷移ボタン */
 .Works_btn a,
 .faq_btn a {
@@ -694,6 +763,23 @@ h3 {
   right: 25px;
 }
 
+@media screen and (max-width: 1140px) {
+  .Works {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .Works {
+    justify-content: space-around;
+    gap: 40px;
+  }
+}
+
+/* SP版 */
+@media screen and (max-width: 800px) {
+}
+
 /* contact */
 .contact_container {
   background-color: #f58196;
@@ -713,6 +799,7 @@ h3 {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
+  gap: 20px;
 }
 
 /* contactテキスト部分 */
@@ -895,6 +982,36 @@ h2 {
   padding-top: 45px;
 }
 
+@media screen and (max-width: 980px) {
+  .contact_container p {
+    font-size: 16px;
+  }
+
+  .contact_illust {
+    width: 400px;
+    height: 264px;
+  }
+
+  .search {
+    left: 40%;
+    bottom: 3%;
+  }
+
+  .contact_link img {
+    display: block;
+    width: 140px;
+  }
+
+  .contact_illust .balloon1,
+  .contact_illust .balloon2 {
+    width: 56px;
+  }
+}
+
+/* SP版 */
+@media screen and (max-width: 800px) {
+}
+
 /* フッター */
 .footer {
   background-color: #fff9e5;
@@ -960,7 +1077,8 @@ h2 {
   /* background-color: #c7eaee; */
   display: flex;
   align-items: flex-end;
-  gap: 60px;
+  gap: 50px;
+  margin-left: 24px;
 }
 
 .top_page {
@@ -975,6 +1093,38 @@ h2 {
 
 .top_page a:hover::before {
   top: 25px;
+}
+
+@media screen and (max-width: 1140px) {
+  .footer_nav {
+    gap: 48px;
+  }
+
+  .footer_nav ul {
+    gap: 48px;
+  }
+
+  .footer_right {
+    /* background-color: #c7eaee; */
+    display: flex;
+    align-items: flex-end;
+    gap: 0px;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .footer_nav {
+    gap: 24px;
+  }
+
+  .footer_nav ul {
+    gap: 24px;
+  }
+}
+
+/* SP版 */
+@media screen and (max-width: 800px) {
 }
 
 /*----------------- About Me---------------- */
