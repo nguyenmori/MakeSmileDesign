@@ -89,42 +89,47 @@
 }
 
 /* MV */
+.main_visual_top {
+  display: flex;
+  flex-direction: row;
+}
+
 .main_visual {
+  background-color: #fff9e5;
+}
+
+.prev,
+.next {
+  width: 80px;
+  height: auto;
   background-color: #fff9e5;
 }
 
 .MV_img {
   max-width: 1100px;
-  padding: 40px 80px 80px 80px;
+  padding: 40px 0 80px 0;
   margin: auto;
+}
+
+.header_slider {
   position: relative;
 }
 
 /* MVテキスト部分 */
-.MV_img span {
-  background-color: #fff;
+.MV_text {
   font-size: 40px;
-  display: inline-block;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  bottom: 36%;
+  margin-left: 20px;
+}
+
+.MV_text span {
+  background-color: #fff;
   padding: 16px;
-  margin-left: 80px;
-}
-
-.MV_img span:first-child {
-  position: absolute;
-  top: 240px;
-  left: 20px;
-}
-
-.MV_img span:nth-child(2) {
-  position: absolute;
-  top: 332px;
-  left: 20px;
-}
-
-.MV_img span:last-child {
-  position: absolute;
-  top: 424px;
-  left: 20px;
+  width: fit-content;
 }
 
 /* メニュー */
@@ -133,8 +138,8 @@
   height: 23px;
   cursor: pointer;
   position: absolute;
-  top: 20px;
-  right: 25px;
+  top: 54px;
+  right: 84px;
   /* 重なり具合 */
   z-index: 2;
 }
@@ -247,6 +252,7 @@
   width: 100%;
   height: 94px;
   border-radius: 0px;
+  box-sizing: border-box;
 }
 
 .MV-scroll-infinity__wrap .scroll-infinity__item {
@@ -264,6 +270,25 @@
   animation: infinity-scroll-left 25s infinite linear 0.5s both;
 }
 
+@media screen and (max-width: 1140px) {
+  .MV_text {
+    font-size: 32px;
+    bottom: 40%;
+    gap: 20px;
+  }
+
+  .MV_text span {
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .MV_text {
+    font-size: 28px;
+    bottom: 45%;
+  }
+}
+
 /* About MeとWorks */
 .main_container {
   display: flex;
@@ -278,6 +303,7 @@
   border: 1px solid #1f1e00;
   border-radius: 52px;
   position: relative;
+  overflow: hidden;
 }
 
 .banner_box h2 a .img {
@@ -287,6 +313,9 @@
   margin: auto;
   padding-top: 50px;
   transition-duration: 0.4s;
+  position: absolute;
+  top: 0;
+  left: 50px;
 }
 
 .banner_box h2 a .img:hover {
@@ -311,7 +340,7 @@
 .works_img .around_text_box .around_text_block p {
   align-items: center;
   -webkit-animation: frame 8s linear 0s infinite;
-  animation: frame 8s linear 0s infinite;
+  animation: frame 8s linear 2s infinite;
   display: flex;
   height: 100%;
   justify-content: space-between;
@@ -335,7 +364,7 @@
   height: 100%;
   justify-content: center;
   width: 33.3333333333%;
-  color: #f57096;
+  color: #71cac6;
 }
 
 .banner_box .around_text_box .around_text_block.block1,
@@ -389,6 +418,40 @@
   }
 }
 
+@media screen and (max-width: 1140px) {
+  .main_container {
+    gap: 20px;
+  }
+
+  .banner_box {
+    width: 480px;
+    height: 480px;
+  }
+  .banner_box h2 a .img {
+    width: 380px;
+    height: 380px;
+    top: 0%;
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .main_container {
+    justify-content: space-around;
+  }
+
+  .banner_box {
+    width: 400px;
+    height: 400px;
+  }
+  .banner_box h2 a .img {
+    width: 323px;
+    height: 323px;
+    top: -3%;
+    left: 10%;
+  }
+}
+
 /* concept */
 .concept {
   background-color: #fff9e5;
@@ -402,7 +465,8 @@
   background-color: #fff9e5;
   border: 1px solid #1f1e00;
   border-radius: 22px;
-  padding: 60px 10px 20px 10px;
+  padding: 60px 10px;
+  position: relative;
 }
 
 .concept_text p {
@@ -413,11 +477,105 @@
   font-style: normal;
 }
 
-.nico {
-  display: flex;
+.nico1 {
+  display: block;
+  width: 56px;
+  position: absolute;
+  bottom: 0px;
+  left: 25px;
+  animation: rolling_right 9s ease-in-out 1.65s infinite;
+}
+
+.nico2 {
+  display: block;
+  width: 56px;
+  position: absolute;
+  bottom: 0px;
+  right: 25px;
+  animation: rolling_left 7.5s ease-in-out 1.98s infinite;
+}
+
+.nico3 {
+  display: block;
+  width: 56px;
+  position: absolute;
+  bottom: 0px;
+  right: 50%;
+  animation: rolling_left 8s ease-in-out 1.85s infinite;
+}
+
+/* nicoアニメーション */
+@keyframes return {
+  0% {
+    rotate: -63deg;
+    translate: -21px 0;
+  }
+  40% {
+    rotate: -170deg;
+    translate: -81px 0;
+  }
+  80% {
+    rotate: 10deg;
+    translate: 10px 0;
+  }
+  100% {
+    rotate: 0deg;
+    translate: 0 0;
+  }
+}
+
+@keyframes rolling_left {
+  0% {
+    rotate: 0deg;
+    translate: 0 0;
+  }
+  20% {
+    rotate: -170deg;
+    translate: -81px 0;
+  }
+  40% {
+    rotate: 25deg;
+    translate: 20px 0;
+  }
+  50% {
+    rotate: 0deg;
+    translate: 0 0;
+  }
+  0% {
+    rotate: 0deg;
+    translate: 0 0;
+  }
+}
+@keyframes rolling_right {
+  0% {
+    rotate: 0deg;
+    translate: 0 0;
+  }
+  20% {
+    rotate: 170deg;
+    translate: 81px 0;
+  }
+  40% {
+    rotate: -25deg;
+    translate: -20px 0;
+  }
+  50% {
+    rotate: 0deg;
+    translate: 0 0;
+  }
+  0% {
+    rotate: 0deg;
+    translate: 0 0;
+  }
 }
 
 /* 制作実績TOP一覧 */
+.Works_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 
 .Works {
   display: flex;
@@ -428,6 +586,7 @@
 
 .works_box {
   width: 300px;
+  overflow: hidden;
 }
 
 .works_img {
@@ -437,6 +596,7 @@
   border: 1px solid #1f1e00;
   border-radius: 30px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .works_img img {
@@ -471,28 +631,67 @@ h3 {
   text-align: center;
 }
 
+@media screen and (max-width: 1140px) {
+  .Works {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .Works {
+    justify-content: space-around;
+    gap: 40px;
+  }
+}
+
 /* 制作実績一覧ページ遷移ボタン */
-.Works_btn {
+.Works_btn a,
+.faq_btn a {
   border-bottom: 2px solid#1f1e00;
   width: 498px;
   margin: 50px auto;
   padding: 16px;
-}
-
-.Works_btn a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.Works_btn_text {
+  display: inline-block;
+  position: relative;
   font-size: 36px;
   font-family: "vdl-gigamarujr", sans-serif;
   font-weight: 300;
 }
 
-.Works_btn_arrow {
+.Works_btn a::before,
+.faq_btn a::before {
+  background-image: url(../image/Works_arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 0;
+  content: "";
+  height: 25px;
+  margin: auto;
+  position: absolute;
+  right: 30px;
+  top: 10px;
   width: 36px;
+}
+
+.Works_btn a::before,
+.Works_btn a::after,
+.faq_btn a::before,
+.faq_btn a::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 0;
+  content: "";
+  height: 25px;
+  margin: auto;
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  transition: right 0.5s;
+  width: 36px;
+}
+.Works_btn a:hover::before,
+.faq_btn a:hover::before {
+  right: 25px;
 }
 
 /* contact */
@@ -503,7 +702,7 @@ h3 {
   border-radius: 50px;
   margin-bottom: 100px;
   box-sizing: border-box;
-  padding: 4px;
+  padding: 5px;
 }
 
 .border {
@@ -540,29 +739,19 @@ h2 {
 }
 
 /* （FAQ）contactページ遷移ボタン */
-.faq_btn {
-  /* background-color: antiquewhite; */
-  border-bottom: 2px solid #fff;
-  width: 264px;
-}
-
 .faq_btn a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px;
-}
-
-.faq_btn_text {
   font-size: 20px;
   color: #fff;
   font-family: "vdl-gigamarujr", sans-serif;
   font-weight: 300;
+  padding: 8px;
+  border-bottom: 1px solid#fff;
+  width: 264px;
+  margin: 0 auto;
 }
 
-.faq_btn_arrow {
-  width: 20px;
-  margin-bottom: 12px;
+.faq_btn a::before {
+  background-image: url(../image/FAQ_arrow.svg);
 }
 
 /* contactイラスト部分 */
@@ -582,8 +771,31 @@ h2 {
   top: 25%;
   left: 35%;
   z-index: 50;
-  animation: fuwafuwa 5s ease-in-out infinite alternate;
+  animation: updown 2s infinite ease-in-out alternate;
 }
+
+/* .contact_link img a:hover {
+  animation: silde 2s infinite ease-in-out alternate;
+} */
+
+@keyframes updown {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(16px);
+  }
+}
+
 .contact_illust .balloon1 {
   width: 60px;
   position: absolute;
@@ -599,36 +811,41 @@ h2 {
   z-index: 2;
   animation: fuwafuwa 3s ease-in-out infinite alternate;
 }
-.contact_illust .cloud {
-  width: 148px;
-  position: absolute;
-  top: 23%;
-  right: 9%;
-  z-index: 1;
-}
-.contact_illust .cloud2 {
-  width: 94px;
-  position: absolute;
-  bottom: 10px;
-  left: 110px;
-}
-.contact_illust .cloud3 {
-  width: 148px;
-  position: absolute;
-  bottom: 10%;
-  left: 5%;
-}
-.contact_illust .cloud4 {
-  width: 94px;
-  position: absolute;
-  top: 10%;
-  left: 42%;
-}
-.contact_illust .Sun {
+
+/* .contact_illust .Sun {
   width: 96px;
   position: absolute;
   top: 5%;
   right: 5%;
+} */
+
+.contact_illust {
+  animation: cloud 25s linear infinite;
+  background: url(../image/cloud.svg),
+    linear-gradient(#2cb4fd, hsl(171, 40%, 91%));
+  background-position-x: 0%;
+  background-position-y: 35%;
+  background-repeat: repeat-x;
+  transition: 1s;
+}
+
+.contact_illust:hover {
+  animation: cloud 10s linear infinite;
+  background: url(../image/cloud.svg),
+    linear-gradient(#ffb039, hsl(171, 40%, 91%));
+  background-position-x: 0%;
+  background-position-y: 35%;
+  background-repeat: repeat-x;
+}
+
+/* 2. keyframeを使って、雲が流れるように。 */
+@keyframes cloud {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 800px;
+  }
 }
 
 @keyframes fuwafuwa {
@@ -748,6 +965,16 @@ h2 {
 
 .top_page {
   width: 18px;
+}
+
+.top_page:hover {
+  transition: 1s;
+  -webkit-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+}
+
+.top_page a:hover::before {
+  top: 25px;
 }
 
 /*----------------- About Me---------------- */
@@ -896,6 +1123,20 @@ h2 {
   border-radius: 34px;
   padding: 0 8px 2px 8px;
   line-height: 24px;
+  text-align: center;
+}
+
+.tools_box {
+  width: 80%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 9px;
+}
+
+.Flex {
+  display: flex;
+  justify-content: center;
 }
 
 /* -----------------------WORKS--------------------- */
@@ -1100,17 +1341,27 @@ select {
 }
 
 .send_btn button {
-  background-color: #ebf7f9;
   width: 200px;
   height: 200px;
   border-radius: 50%;
   margin: 0 auto;
   border: 1px solid #1f1e00;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  animation: cloud 25s linear infinite;
+  background: url(../image/cloud.svg),
+    linear-gradient(#bbe4fa, hsl(171, 40%, 91%));
+  background-position-x: 0%;
+  background-position-y: 35%;
+  background-repeat: repeat-x;
 }
 
 .send_btn button:hover {
-  background-color: #c7eaee;
+  animation: cloud 10s linear infinite;
+  background: url(../image/cloud.svg),
+    linear-gradient(#ffb039, hsl(171, 40%, 91%));
+  background-position-x: 0%;
+  background-position-y: 35%;
+  background-repeat: repeat-x;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -1156,4 +1407,7 @@ button img {
 .Thanks .for_top a:hover {
   background-color: #fff;
   border: 1px solid #71cac6;
+}
+
+@media screen and (max-width: 1140px) {
 }

@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <title>MakeSmileDesign</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
   <link rel="icon" href="image/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +15,8 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script>
     (function (d) {
       var config = {
@@ -24,7 +28,6 @@
     })(document);
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
 </head>
 
 <body>
@@ -78,10 +81,29 @@
   </header>
   <main>
     <section class="main_visual">
-      <div>
+      <div class="main_visual_top">
         <div class="prev"></div>
         <div class="MV_img">
-          <img src="image/salon.LP_FV２.png" alt="">
+          <div class="header_slider">
+            <div>
+              <picture>
+                <source srcset="./images" media="(max-width:780px)">
+                <img src="./image/salon.LP_FV２.png" alt="">
+              </picture>
+            </div>
+            <!-- <div>
+              <picture>
+                <source srcset="./images" media="(max-width:780px)">
+                <img src="./image/plan.banner_FV２.png" alt="">
+              </picture>
+            </div>
+            <div>
+              <picture>
+                <source srcset="./images" media="(max-width:780px)">
+                <img src="./image/design_cafe_FV２.png" alt="">
+              </picture>
+            </div> -->
+          </div>
           <div class="MV_text">
             <span>お客さまの</span>
             <span>お客さまを</span>
@@ -185,9 +207,9 @@
           そんな想いをデザインを通して実現していきます。<br>
           デザインで一緒に課題を解決させてください。</p>
         <div class="nico">
-          <img src="image/nico.svg" alt="">
-          <img src="image/nico2.svg" alt="">
-          <img src="image/nico3.svg" alt="">
+          <img src="image/nico.svg" alt="" class="nico1">
+          <img src="image/nico2.svg" alt="" class="nico2">
+          <img src="image/nico3.svg" alt="" class="nico3">
         </div>
       </div>
     </section>
@@ -225,8 +247,8 @@
                   <span>sample</span>
                 </p>
               </div>
+            </div>
           </div>
-        </div>
           <h3>バーガーショップさま①</h3>
           <div class="key">
             <p>バナー</p>
@@ -269,7 +291,7 @@
                   <span>sample</span>
                 </p>
               </div>
-          </div>
+            </div>
           </div>
           <h3>バーガーショップさま②</h3>
           <div class="key">
@@ -313,7 +335,7 @@
                   <span>sample</span>
                 </p>
               </div>
-          </div>
+            </div>
           </div>
           <h3>デザスタmobileさま</h3>
           <div class="key">
@@ -357,7 +379,7 @@
                   <span>sample</span>
                 </p>
               </div>
-          </div>
+            </div>
           </div>
           <h3>WORKERSさま</h3>
           <div class="key">
@@ -401,7 +423,7 @@
                   <span>sample</span>
                 </p>
               </div>
-          </div>
+            </div>
           </div>
           <h3>Design CAFEさま</h3>
           <div class="key">
@@ -445,7 +467,7 @@
                   <span>sample</span>
                 </p>
               </div>
-          </div>
+            </div>
           </div>
           <h3>TRRRRIP.さま</h3>
           <div class="key">
@@ -459,10 +481,7 @@
         </div>
       </div>
       <div class="Works_btn">
-        <a href="./Works.html">
-          <p class="Works_btn_text">作品をもっとみる</p>
-          <p class="Works_btn_arrow"><img src="image/Works_arrow.svg" alt="→"></p>
-        </a>
+        <a href="./Works.html">作品をもっとみる</a>
       </div>
     </section>
     <section class="contact_container">
@@ -475,9 +494,7 @@
             </p>
           </div>
           <div class="faq_btn">
-            <a href="./contact.html">
-              <p class="faq_btn_text">ご依頼について</p>
-              <p class="faq_btn_arrow"><img src="image/FAQ_arrow.svg" alt="→"></p>
+            <a href="./contact.html">ご依頼について
             </a>
           </div>
         </div>
@@ -485,11 +502,7 @@
           <a href="./contact.html" class="contact_link"><img src="image/plane.svg" alt="コンタクトフォーム" class="plane"></a>
           <img src="image/balloon１.svg" alt="" class="balloon1">
           <img src="image/balloon２.svg" alt="" class="balloon2">
-          <img src="image/cloud.svg" alt="" class="cloud">
-          <img src="image/cloud２.svg" alt="" class="cloud2">
-          <img src="image/cloud３.svg" alt="" class="cloud3">
-          <img src="image/cloud４.svg" alt="" class="cloud4">
-          <img src="image/Sun.svg" alt="" class="Sun">
+          <!-- <img src="image/Sun.svg" alt="" class="Sun"> -->
         </div>
       </div>
     </section>
@@ -522,7 +535,7 @@
         $('.nav_btn').toggleClass('open');
         $('.nav').fadeToggle();
       })
-    })
+  });
   </script>
 </body>
 
