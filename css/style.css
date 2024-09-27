@@ -214,7 +214,6 @@
   color: #1f1e00;
   padding: 30px;
   font-family: "vdl-gigamarujr", sans-serif;
-
   font-size: 18px;
   font-weight: 300;
 }
@@ -312,13 +311,14 @@
     gap: 10px;
   }
 
-  .daily_welcome .scroll-infinity__wrap {
-    width: 45%;
+  .daily_welcome .scroll-infinity__item {
+    width: calc(70vw / 6);
+    margin-left: 8px;
+    overflow: hidden;
   }
 
-  .daily_welcome .scroll-infinity__item {
-    width: calc(35vw / 6);
-    margin-left: 8px;
+  .daily_welcome .scroll-infinity__item img{
+    width: 42px;
   }
 
   .nav_btn {
@@ -328,6 +328,12 @@
     z-index: 2;
   }
 
+  .nav {
+    width: 100%;
+    background: rgba(255, 249, 229, 0.98);
+  }
+  
+
   /* MV */
   .prev,
   .next {
@@ -335,24 +341,28 @@
     height: auto;
   }
 
+  .MV_img img {
+    height: 480px;
+    object-fit: cover;
+  }
   .MV_text {
     font-size: 20px;
     position: absolute;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    bottom: 50%;
-    margin-left: 36px;
+    bottom: 30%;
+    margin-left: 30px;
   }
   .MV-scroll-infinity__wrap {
     height: 60px;
   }
   .MV-scroll-infinity__wrap .scroll-infinity__item {
-    width: calc(280vw / 6);
+    width: calc(400vw / 6);
     margin-left: 30px;
   }
   .MV-scroll-infinity__wrap .scroll-infinity__item img {
-    margin-top: 16px;
+    margin-top: 20px;
   }
 }
 
