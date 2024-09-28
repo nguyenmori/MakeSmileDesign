@@ -111,7 +111,7 @@
   margin: auto;
 }
 
-.header_slider .picture{
+.header_slider .picture {
   position: relative;
 }
 
@@ -304,6 +304,10 @@
   .header .LOGO {
     width: 80px;
     position: static;
+  }
+
+  .contact_LOGO {
+    width: 80px;
   }
 
   .daily_welcome {
@@ -1260,6 +1264,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     padding: 58px 8%;
   }
 
@@ -1387,7 +1392,7 @@ h2 {
 
 .Skills_box {
   width: 520px;
-  height: 800px;
+  height: auto;
   border-radius: 50px;
   display: flex;
   flex-direction: column;
@@ -1432,11 +1437,11 @@ h2 {
   align-items: baseline;
   gap: 16px;
   flex-wrap: wrap;
-  margin-top: 80px;
+  margin-top: 20%;
 }
 
 .coding_box .Tools {
-  margin-top: 140px;
+  margin-top: 34%;
 }
 
 .Tools h4 {
@@ -1465,6 +1470,28 @@ h2 {
   justify-content: center;
 }
 @media screen and (max-width: 1140px) {
+  .AboutMe_title,
+  .Skills_titel,
+  .Works_title {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .AboutMe_container {
+    margin: 0 10px;
+  }
+  .design_box {
+    margin-left: 10px;
+  }
+
+  .coding_box {
+    margin-right: 10px;
+  }
+  .Tools {
+    margin-top: 9%;
+  }
+  .coding_box .Tools {
+    margin-top: 25%;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -1484,7 +1511,7 @@ h2 {
 
   .AboutMe_container {
     border-radius: 54px;
-    max-width: 900px;
+    max-width: 800px;
     flex-direction: column-reverse;
     align-items: center;
     padding: 0;
@@ -1492,7 +1519,6 @@ h2 {
   }
 
   .aboutme_text {
-    /* background-color: #f58196; */
     margin: 40px 10% 80px 10%;
     flex-direction: column;
   }
@@ -1520,9 +1546,8 @@ h2 {
   }
   /* スキル&ツール */
   .Skills {
-    margin-bottom: 140px;
+    margin-bottom: 100px;
   }
-
   .Skills_container {
     flex-direction: column;
     gap: 60px;
@@ -1530,35 +1555,46 @@ h2 {
   }
 
   .Skills_box {
-    width: 520px;
-    height: 800px;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: auto;
     padding: 36px;
   }
   .Skills_box img {
     display: block;
-    width: 280px;
+    width: 200px;
     margin-top: 32px;
   }
 
   .Skills_box h3 {
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 400;
     margin: 48px auto;
   }
+  .design_box {
+    margin-right: 10px;
+  }
 
-  .Skills_box p {
-    font-size: 16px;
-    line-height: 2;
+  .coding_box {
+    margin-left: 10px;
+  }
+  .Tools {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .tools_box {
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .coding_box .Tools {
+    margin-top: 12%;
   }
 }
 
 /* -----------------------WORKS--------------------- */
 .Works_title {
   padding-left: 0;
+  margin-right: auto;
 }
 
 .Works_title h2 {
@@ -1571,6 +1607,24 @@ h2 {
   color: #71cac6;
   text-shadow: 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff,
     -1px -1px 1px #fff;
+}
+
+@media screen and (max-width: 980px) {
+  .Works {
+    justify-content: space-between;
+    margin: 0 60px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .Works {
+    justify-content: center;
+    gap: 60px;
+    margin: 0 60px;
+    padding-bottom: 120px;
+  }
+  .Works_title p {
+    font-size: 16px;
+  }
 }
 
 /* ---------Works遷移ページ------------ */
@@ -1794,7 +1848,7 @@ button img {
   border: 1px solid #f57096;
   border-radius: 36px;
   text-align: center;
-  margin: 200px auto 48px auto;
+  margin: 200px 48px auto;
   max-width: 1100px;
   padding: 64px;
 }
@@ -1809,22 +1863,47 @@ button img {
   font-size: 24px;
 }
 
-.Thanks_page .for_top a {
+.for_top a {
   display: block;
   text-align: center;
-  margin: 0 auto 200px auto;
+  margin: 100px auto;
   background-color: #71cac6;
   width: 480px;
   height: 48px;
   line-height: 48px;
   border-radius: 48px;
   color: #fff;
+  transition: 0.4s;
 }
 
-.Thanks .for_top a:hover {
+.for_top a:hover {
   background-color: #fff;
   border: 1px solid #71cac6;
+  box-sizing: border-box;
+  color: #71cac6;
 }
 
 @media screen and (max-width: 1140px) {
+  .contact_page_container {
+    margin: 100px 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .form_content label {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .form_content_box {
+    max-width: 524px;
+  }
+
+  .form_content {
+    display: flex;
+    margin-bottom: 48px;
+    gap: 24px;
+    justify-content: space-between;
+    flex-direction: column;
+  }
 }
