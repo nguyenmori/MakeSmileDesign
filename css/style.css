@@ -1000,7 +1000,7 @@ h2 {
     background-position-x: 0;
   }
   to {
-    background-position-x: 800px;
+    background-position-x: -800px;
   }
 }
 
@@ -1486,7 +1486,7 @@ h2 {
     border-radius: 54px;
     max-width: 900px;
     flex-direction: column-reverse;
-   align-items: center;
+    align-items: center;
     padding: 0;
     margin: 0 10px;
   }
@@ -1519,41 +1519,41 @@ h2 {
     margin-bottom: 0px;
   }
   /* スキル&ツール */
-.Skills {
-  margin-bottom: 140px;
-}
+  .Skills {
+    margin-bottom: 140px;
+  }
 
-.Skills_container {
-  flex-direction: column;
-  gap: 60px;
-  margin-bottom: 92px;
-}
+  .Skills_container {
+    flex-direction: column;
+    gap: 60px;
+    margin-bottom: 92px;
+  }
 
-.Skills_box {
-  width: 520px;
-  height: 800px;
-  border-radius: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 36px;
-}
-.Skills_box img {
-  display: block;
-  width: 280px;
-  margin-top: 32px;
-}
+  .Skills_box {
+    width: 520px;
+    height: 800px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px;
+  }
+  .Skills_box img {
+    display: block;
+    width: 280px;
+    margin-top: 32px;
+  }
 
-.Skills_box h3 {
-  font-size: 36px;
-  font-weight: 400;
-  margin: 48px auto;
-}
+  .Skills_box h3 {
+    font-size: 36px;
+    font-weight: 400;
+    margin: 48px auto;
+  }
 
-.Skills_box p {
-  font-size: 16px;
-  line-height: 2;
-}
+  .Skills_box p {
+    font-size: 16px;
+    line-height: 2;
+  }
 }
 
 /* -----------------------WORKS--------------------- */
