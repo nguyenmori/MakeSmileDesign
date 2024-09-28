@@ -357,7 +357,7 @@
     height: 60px;
   }
   .MV-scroll-infinity__wrap .scroll-infinity__item {
-    width: calc(400vw / 6);
+    width: calc(280vw / 6);
     margin-left: 30px;
   }
   .MV-scroll-infinity__wrap .scroll-infinity__item img {
