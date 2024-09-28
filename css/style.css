@@ -936,7 +936,7 @@ h2 {
 
 @keyframes updown {
   0% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
   100% {
     transform: translateY(8px);
@@ -948,7 +948,7 @@ h2 {
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(16px);
+    transform: translateX(8px);
   }
 }
 
