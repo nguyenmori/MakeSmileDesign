@@ -1093,6 +1093,10 @@ h2 {
   }
   h2 {
     font-size: 32px;
+    margin-bottom: 0px;
+  }
+
+  .contact_text_top h2 {
     margin-bottom: 26px;
   }
 
@@ -1113,7 +1117,7 @@ h2 {
   .contact_link img {
     display: block;
     width: 90px;
-    top: 16%;
+    top: 20%;
     left: 35%;
   }
 
@@ -1256,7 +1260,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 32px 8%;
+    padding: 58px 8%;
   }
 
   .footer_nav {
@@ -1288,12 +1292,13 @@ h2 {
   .footer_right {
     gap: 30px;
     margin-left: 64px;
+    margin-top: 25px;
   }
 
   .top_page {
     width: 18px;
   }
-  small{
+  small {
     font-size: 10px;
   }
 }
@@ -1458,6 +1463,97 @@ h2 {
 .Flex {
   display: flex;
   justify-content: center;
+}
+@media screen and (max-width: 1140px) {
+}
+
+@media screen and (max-width: 800px) {
+  .AboutMe_title,
+  .Skills_titel,
+  .Works_title {
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+  }
+  .AboutMe_title p,
+  .Skills_titel p,
+  .contact_title p {
+    font-size: 16px;
+  }
+
+  .AboutMe_container {
+    border-radius: 54px;
+    max-width: 900px;
+    flex-direction: column-reverse;
+   align-items: center;
+    padding: 0;
+    margin: 0 10px;
+  }
+
+  .aboutme_text {
+    /* background-color: #f58196; */
+    margin: 40px 10% 80px 10%;
+    flex-direction: column;
+  }
+
+  .name h3 {
+    font-size: 26px;
+    margin: 24px 0 6px -4px;
+  }
+
+  .aboutme_text p {
+    font-size: 16px;
+    padding-bottom: 26px;
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+  }
+  .icon img {
+    display: block;
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 54px;
+    margin-bottom: 0px;
+  }
+  /* スキル&ツール */
+.Skills {
+  margin-bottom: 140px;
+}
+
+.Skills_container {
+  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 92px;
+}
+
+.Skills_box {
+  width: 520px;
+  height: 800px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px;
+}
+.Skills_box img {
+  display: block;
+  width: 280px;
+  margin-top: 32px;
+}
+
+.Skills_box h3 {
+  font-size: 36px;
+  font-weight: 400;
+  margin: 48px auto;
+}
+
+.Skills_box p {
+  font-size: 16px;
+  line-height: 2;
+}
 }
 
 /* -----------------------WORKS--------------------- */
