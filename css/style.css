@@ -284,7 +284,7 @@
 @media screen and (max-width: 930px) {
   .MV_text {
     font-size: 28px;
-    bottom: 45%;
+    bottom: 35%;
   }
 }
 
@@ -312,8 +312,8 @@
   }
 
   .daily_welcome .scroll-infinity__item {
-    width: calc(70vw / 6);
-    margin-left: 8px;
+    width: calc(40vw / 6);
+    padding-left: 8px;
     overflow: hidden;
   }
 
@@ -350,7 +350,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    bottom: 10%;
+    bottom: 15%;
     margin-left: 30px;
   }
   .MV-scroll-infinity__wrap {
