@@ -1,5 +1,112 @@
 @charset "UTF-8";
 
+/* ローディング画面 */
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 7s;
+  background-color: #f58196;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.wrapper {
+  width: 200px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff9e5;
+  left: 15%;
+  transform-origin: 50%;
+  animation: circle 0.5s alternate infinite ease;
+}
+
+@keyframes circle {
+  0% {
+    top: 60px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+  40% {
+    height: 20px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0%;
+  }
+}
+.circle:nth-child(2) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+.circle:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+.shadow {
+  width: 20px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 62px;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 15%;
+  filter: blur(1px);
+  animation: shadow 0.5s alternate infinite ease;
+}
+
+@keyframes shadow {
+  0% {
+    transform: scaleX(1.5);
+  }
+  40% {
+    transform: scaleX(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scaleX(0.2);
+    opacity: 0.4;
+  }
+}
+.shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+.shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+.wrapper span {
+  position: absolute;
+  top: 75px;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 12px;
+  color: #fff9e5;
+  left: 15%;
+  font-family: "vdl-gigamarujr", sans-serif;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* ヘッダー */
 .header {
   background-color: #fff9e5;
@@ -816,6 +923,7 @@ h3 {
 @media screen and (max-width: 1140px) {
   .Works {
     gap: 40px;
+    margin: 100px 60px;
   }
 }
 
@@ -1096,7 +1204,7 @@ h2 {
     gap: 47px;
   }
   h2 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 0px;
   }
 
@@ -1736,6 +1844,28 @@ h2 {
 .Works_images img {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
+@media screen and (max-width: 800px) {
+  .Works_Content {
+    margin: 0 30px;
+  }
+
+  .Works_Content h3 {
+    font-size: 24px;
+    margin-bottom: 60px;
+  }
+
+  .Works_Content h4 {
+    font-size: 16px;
+  }
+
+  .Works_small_block p {
+    font-size: 16px;
+  }
+
+  .Works_images ul {
+    flex-direction: column;
+  }
+}
 
 /* コンタクトフォームページ */
 .contact_title {
@@ -1842,7 +1972,13 @@ button img {
 }
 
 /* Thanksページ */
-
+.Thanks_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 100px;
+}
 .Thanks {
   background-color: #fff;
   border: 1px solid #f57096;
@@ -1866,14 +2002,16 @@ button img {
 .for_top a {
   display: block;
   text-align: center;
-  margin: 100px auto;
   background-color: #71cac6;
-  width: 480px;
+  width: 100%;
+  max-width: 480px;
   height: 48px;
-  line-height: 48px;
+  padding: 16px;
+  line-height: 16px;
   border-radius: 48px;
   color: #fff;
   transition: 0.4s;
+  box-sizing: border-box;
 }
 
 .for_top a:hover {
@@ -1895,6 +2033,38 @@ button img {
   }
 }
 @media screen and (max-width: 800px) {
+  .contact_title {
+    flex-direction: column;
+    margin-bottom: 34px;
+  }
+  .contact_message p {
+    font-size: 16px;
+  }
+  /* フォームの中身 */
+  .form_content label {
+    font-size: 20px;
+  }
+
+  .form_content input,
+  .form_content textarea,
+  .form_content select {
+    width: 524px;
+    max-width: 100%;
+  }
+
+  .send_btn button {
+    width: 100px;
+    height: 100px;
+  }
+
+  button img {
+    width: 60px;
+  }
+  /* Thanksページ */
+  .Thanks p {
+    font-size: 16px;
+  }
+
   .form_content_box {
     max-width: 524px;
   }

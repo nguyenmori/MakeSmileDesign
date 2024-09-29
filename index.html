@@ -31,6 +31,17 @@
 </head>
 
 <body>
+  <div id="loading">
+    <div class="wrapper">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+      <span>Loading</span>
+    </div>
+  </div>
   <header class="header">
     <div class="header_left">
       <div class="logo">
@@ -536,6 +547,10 @@
         $('.nav').fadeToggle();
       })
     });
+    window.onload = function () {
+      const spinner = document.getElementById('loading');
+      spinner.classList.add('loaded');
+    }
   </script>
 </body>
 
