@@ -25,6 +25,7 @@
     })(document);
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -179,7 +180,7 @@
         </div>
       </div>
     </section>
-    <section class="contact_container">
+    <section class="contact_container about_contact">
       <div class="border">
         <div class="contact_text">
           <div class="contact_text_top">
@@ -201,8 +202,52 @@
         </div>
       </div>
     </section>
-    <div class="search">
-      <a href=""><img src="image/search.svg" alt="検索" class="glass"></a>
+    <div class="menu-btn" id="js__btn">
+      <span data-txt-menu="MENU" data-txt-close="CLOSE">
+        <img src="./image/search.svg" alt="" class="glass">
+        <span class="menu-btn-line"></span>
+      </span>
+    </div>
+    <div class="menu" id="js__nav">
+      <div class="menu_LOGO">
+        <a href="./index.html"><img src="./image/Logo.svg" alt="Make Smile Design"></a>
+      </div>
+      <div class="search_wrapper">
+        <div class="search_window">
+          <form action="#" class="search-form-5">
+            <label>
+              <input type="text" placeholder="Search">
+            </label>
+            <button type="submit" aria-label="検索"></button>
+          </form>
+        </div>
+      </div>
+      <div class="main_menu">
+        <ul>
+          <li><a href="./aboutme.html" class="navi_items"><span>私について</span><span class="item">About Me</span></a></li>
+          <li><a href="./Works.html" class="navi_items"><span>制作実績</span><span class="item">Works</span></a></li>
+          <li><a href="./contact.html" class="navi_items"><span>ご依頼について</span><span class="item">FAQ</span></a></li>
+          <li><a href="./contact.html" class="navi_items"><span>お問い合わせ</span><span class="item">Contact</span></a></li>
+        </ul>
+      </div>
+      <div class="sub_navi_block">
+        <p class="head">各種SNS</p>
+        <ul>
+          <li><a href="https://www.instagram.com/nguyenm_atz/" target="_blank" class="key_box insta">Instagram</a>
+          </li>
+          <li><a href="https://x.com/NgyenM_azt1412/" target="_blank" class="key_box X">X</a>
+          </li>
+        </ul>
+      </div>
+      <div class="sub_navi_block">
+        <p class="head">キーワード</p>
+        <ul class="sub_navi_list">
+          <li class="key_box">バナー</li>
+          <li class="key_box">LP</li>
+          <!-- <li> <a class="navi_items" href="https://nguyenmori.github.io/MakeSmileDesign//tag/banner/">バナー</a></li>
+            <li> <a class="navi_items" href="https://nguyenmori.github.io/MakeSmileDesign//tag/LP/">LP</a></li> -->
+        </ul>
+      </div>
     </div>
   </main>
   <footer class="footer">
@@ -232,6 +277,24 @@
       })
     })
   </script>
+    <script>
+      jQuery.noConflict();
+      (function ($) {
+  
+        $(function () {
+          var $body = $('body');
+          //開閉用ボタンをクリックでクラスの切替え
+          $('#js__btn').on('click', function () {
+            $body.toggleClass('open');
+          });
+          //メニュー名以外の部分をクリックで閉じる
+          $('#js__nav').on('click', function () {
+            $body.removeClass('open');
+          });
+        });
+  
+      }(jQuery));
+    </script>
 </body>
 
 </html>
