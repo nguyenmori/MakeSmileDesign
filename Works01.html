@@ -31,10 +31,11 @@
         <h1><a href="./index.html"><img src="image/Logo.svg" alt="Make Smile Design" class="LOGO"></a></h1>
       </div>
       <div class="daily_welcome">
-        <div class="date">
+        <div class="date_box">
           <p class="year">2024</p>
-          <p class="month_date"><span>9</span>.<span>15</span></p>
-          <p class="day_of_week">Sun.</p>
+          <p class="month">10.</p>
+          <p class="date">7</p>
+          <p class="day">Mon.</p>
         </div>
         <div class="scroll-infinity">
           <div class="scroll-infinity__wrap">
@@ -75,8 +76,12 @@
   </header>
   <main>
     <section class="main_visual Works_content_MV">
-      <div class="MV_img">
-        <img src="image/WORKERS LP　FV１.png" alt="">
+      <div class="MV">
+        <div class="prev"><a href="./Works06_2.html"><img src="image/PREV_arrow.svg" alt=""></a></div>
+        <div class="MV_img">
+          <img src="image/WORKERS LP　FV１.png" alt="">
+        </div>
+        <div class="next"><a href="./Works02.html"><img src="image/NEXT_arrow.svg" alt=""></a></div>
       </div>
       <div class="scroll-infinity">
         <div class="scroll-infinity__wrap MV-scroll-infinity__wrap">
@@ -247,6 +252,12 @@
         $('.nav_btn').toggleClass('open');
         $('.nav').fadeToggle();
       })
+      $(document).ready(function () {
+        $('.menu-btn').click(function () {
+          $('body').toggleClass('overflow__hidden'),
+          $('menu').toggleClass('overflow__scroll');
+      });
+    })
     })
   </script>
     <script>

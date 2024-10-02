@@ -28,17 +28,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body class="ABOUT">
   <header class="header">
     <div class="header_left">
       <div class="logo">
         <h1><a href="./index.html"><img src="image/Logo.svg" alt="Make Smile Design" class="LOGO"></a></h1>
       </div>
       <div class="daily_welcome">
-        <div class="date">
+        <div class="date_box">
           <p class="year">2024</p>
-          <p class="month_date"><span>9</span>.<span>15</span></p>
-          <p class="day_of_week">Sun.</p>
+          <p class="month">10.</p>
+          <p class="date">7</p>
+          <p class="day">Mon.</p>
         </div>
         <div class="scroll-infinity">
           <div class="scroll-infinity__wrap">
@@ -268,6 +269,7 @@
       <small>©︎ MAKE SMILE DESIGN All Rights Reserved.</small>
       <a href="#"><img src="image/page＿Top.svg" alt="Topに戻る" class="top_page"></a>
     </div>
+    <div class="nico2 nico_footer"><img src="./image/nico2.svg" alt=""></div>
   </footer>
   <script>
     $(function () {
@@ -275,6 +277,12 @@
         $('.nav_btn').toggleClass('open');
         $('.nav').fadeToggle();
       })
+      $(document).ready(function () {
+        $('.menu-btn').click(function () {
+          $('body').toggleClass('overflow__hidden'),
+          $('menu').toggleClass('overflow__scroll');
+      });
+    })
     })
   </script>
     <script>

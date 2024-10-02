@@ -22,6 +22,10 @@ li {
     "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
 }
 
+.overflow__hidden {
+  overflow: hidden;
+}
+
 a {
   /*下線を消す*/
   text-decoration: none;

@@ -30,7 +30,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body class="TOP">
   <div id="loading">
     <div class="wrapper">
       <div class="circle"></div>
@@ -48,10 +48,11 @@
         <h1><a href="#"><img src="image/Logo.svg" alt="Make Smile Design" class="LOGO"></a></h1>
       </div>
       <div class="daily_welcome">
-        <div class="date">
+        <div class="date_box">
           <p class="year">2024</p>
-          <p class="month_date"><span>9</span>.<span>15</span></p>
-          <p class="day_of_week">Sun.</p>
+          <p class="month">10.</p>
+          <p class="date">7</p>
+          <p class="day">Mon.</p>
         </div>
         <div class="scroll-infinity">
           <div class="scroll-infinity__wrap">
@@ -98,22 +99,28 @@
           <div class="header_slider">
             <div>
               <picture>
-                <source srcset="./image/salon.LP_FV1.png" media="(max-width:800px)">
+                <source srcset="./image/salon.LP_WORKES.png" media="(max-width:800px)">
                 <img src="./image/salon.LP_FV２.png" alt="">
               </picture>
             </div>
-            <!-- <div>
+            <div>
               <picture>
-                <source srcset="./images" media="(max-width:780px)">
+                <source srcset="./image/plan.banner_WORKS.png" media="(max-width:780px)">
                 <img src="./image/plan.banner_FV２.png" alt="">
               </picture>
             </div>
             <div>
               <picture>
-                <source srcset="./images" media="(max-width:780px)">
+                <source srcset="./image/design_cafe_WORKES.png" media="(max-width:780px)">
                 <img src="./image/design_cafe_FV２.png" alt="">
               </picture>
-            </div> -->
+            </div>
+            <div>
+              <picture>
+                <source srcset="./image/burger.WORKS_.png" media="(max-width:780px)">
+                <img src="./image/burger.POP_FV２.png" alt="">
+              </picture>
+            </div>
           </div>
           <div class="MV_text">
             <span>お客さまの</span>
@@ -583,6 +590,7 @@
       <small>©︎ MAKE SMILE DESIGN All Rights Reserved.</small>
       <a href="#"><img src="image/page＿Top.svg" alt="Topに戻る" class="top_page"></a>
     </div>
+    <div class="nico3 nico_footer"><img src="./image/nico3.svg" alt=""></div>
   </footer>
   <script>
     $(function () {
@@ -590,6 +598,11 @@
         $('.nav_btn').toggleClass('open');
         $('.nav').fadeToggle();
       })
+      $('.header_slider').slick({
+        autoplay: true,
+        autoplaySpeed: 5000,
+        variableWidth: true,
+      });
     });
     window.onload = function () {
       const spinner = document.getElementById('loading');
@@ -609,6 +622,12 @@
         //メニュー名以外の部分をクリックで閉じる
         $('#js__nav').on('click', function () {
           $body.removeClass('open');
+        });
+      });
+      $(document).ready(function () {
+        $('.menu-btn').click(function () {
+          $('body').toggleClass('overflow__hidden'),
+            $('menu').toggleClass('overflow__scroll');
         });
       });
 
