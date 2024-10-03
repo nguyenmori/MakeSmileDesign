@@ -549,7 +549,6 @@
   }
 
   .MV_img img {
-    height: 480px;
     object-fit: cover;
     box-sizing: border-box;
   }
@@ -1653,7 +1652,9 @@ h2 {
     left: 40%;
     bottom: 3%;
   }
-
+  .search-form-5 {
+    width: 300px; /* 任意の幅に調整してください */
+  }
   .contact_link img {
     display: block;
     width: 140px;
@@ -1756,6 +1757,16 @@ h2 {
     max-width: 1280px;
     width: 80%;
     height: 80vh;
+  }
+}
+@media screen and (max-width: 690px) {
+  .menu-btn {
+    left: 37%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .menu-btn {
+    left: 30%;
   }
 }
 
@@ -2413,6 +2424,22 @@ h2 {
     font-size: 16px;
   }
 
+.Works_small_block:first-child h4, .Works_small_block:nth-child(3) h4 {
+  margin-right: 47px;
+
+}.Works_small_block:nth-child(2) h4 {
+  margin-right: 15px;
+}
+  .Works_small_block {
+    align-items: flex-start;
+  }
+
+  .Works_small_block .skill_key {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 12px;
+  }
   .Works_small_block p {
     font-size: 16px;
   }

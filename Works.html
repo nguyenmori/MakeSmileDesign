@@ -80,7 +80,12 @@
   <main>
     <section class="main_visual Works_MV">
       <div class="MV_img">
-        <img src="image/Works_FV_PC@2x-100.jpg" alt="">
+        <div class="picture">
+          <picture>
+            <source srcset="./image/works_FV_sp@2x-100.jpg" media="(max-width:491px)">
+            <img src="image/Works_FV_PC@2x-100.jpg" alt="">
+          </picture>
+        </div>
       </div>
       <div class="scroll-infinity">
         <div class="scroll-infinity__wrap MV-scroll-infinity__wrap">
@@ -518,29 +523,29 @@
       $(document).ready(function () {
         $('.menu-btn').click(function () {
           $('body').toggleClass('overflow__hidden'),
-          $('menu').toggleClass('overflow__scroll');
-      });
-    })
+            $('menu').toggleClass('overflow__scroll');
+        });
+      })
     })
   </script>
-    <script>
-      jQuery.noConflict();
-      (function ($) {
-  
-        $(function () {
-          var $body = $('body');
-          //開閉用ボタンをクリックでクラスの切替え
-          $('#js__btn').on('click', function () {
-            $body.toggleClass('open');
-          });
-          //メニュー名以外の部分をクリックで閉じる
-          $('#js__nav').on('click', function () {
-            $body.removeClass('open');
-          });
+  <script>
+    jQuery.noConflict();
+    (function ($) {
+
+      $(function () {
+        var $body = $('body');
+        //開閉用ボタンをクリックでクラスの切替え
+        $('#js__btn').on('click', function () {
+          $body.toggleClass('open');
         });
-  
-      }(jQuery));
-    </script>
+        //メニュー名以外の部分をクリックで閉じる
+        $('#js__nav').on('click', function () {
+          $body.removeClass('open');
+        });
+      });
+
+    }(jQuery));
+  </script>
 </body>
 
 </html>
