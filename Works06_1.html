@@ -23,8 +23,8 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -82,7 +82,12 @@
       <div class="MV">
         <div class="prev"><a href="./Works05.html"><img src="image/PREV_arrow.svg" alt=""></a></div>
         <div class="MV_img">
-          <img src="image/burger.luxury_FV１.png" alt="">
+          <picture>
+            <source srcset="./image/burger.luxury_WORKS.png" media="(max-width:481px)">
+            <source srcset="./image/burger.luxury_FV6.png" media="(max-width:800px)">
+            <source srcset="./image/burger.luxury_FV7.png" media="(max-width:1230px)">
+            <img src="./image/burger.luxury_FV１.png" alt="">
+          </picture>
         </div>
         <div class="next"><a href="./Works06_2.html"><img src="image/NEXT_arrow.svg" alt=""></a></div>
       </div>
@@ -262,29 +267,29 @@
       $(document).ready(function () {
         $('.menu-btn').click(function () {
           $('body').toggleClass('overflow__hidden'),
-          $('menu').toggleClass('overflow__scroll');
-      });
-    })
+            $('menu').toggleClass('overflow__scroll');
+        });
+      })
     })
   </script>
-    <script>
-      jQuery.noConflict();
-      (function ($) {
-  
-        $(function () {
-          var $body = $('body');
-          //開閉用ボタンをクリックでクラスの切替え
-          $('#js__btn').on('click', function () {
-            $body.toggleClass('open');
-          });
-          //メニュー名以外の部分をクリックで閉じる
-          $('#js__nav').on('click', function () {
-            $body.removeClass('open');
-          });
+  <script>
+    jQuery.noConflict();
+    (function ($) {
+
+      $(function () {
+        var $body = $('body');
+        //開閉用ボタンをクリックでクラスの切替え
+        $('#js__btn').on('click', function () {
+          $body.toggleClass('open');
         });
-  
-      }(jQuery));
-    </script>
+        //メニュー名以外の部分をクリックで閉じる
+        $('#js__nav').on('click', function () {
+          $body.removeClass('open');
+        });
+      });
+
+    }(jQuery));
+  </script>
 </body>
 
 </html>
