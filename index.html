@@ -623,7 +623,6 @@
       $('.header_slider').slick({
         autoplay: true,
         autoplaySpeed: 5000,
-        variableWidth: true,
       });
     });
     window.onload = function () {
@@ -639,17 +638,23 @@
         var $body = $('body');
         //開閉用ボタンをクリックでクラスの切替え
         $('#js__btn').on('click', function () {
-          $body.toggleClass('open');
+          $body.toggleClass('open'),
+            $('html').toggleClass('overflow__hidden');
         });
         //メニュー名以外の部分をクリックで閉じる
+        $('#js__nav').on('click',function(e) {
+    if(!$(e.target).closest('menu').length) {
+      container.removeClass('open');
+    }
+  });
         $('#js__nav').on('click', function () {
-          $body.removeClass('open');
+          $body.removeClass('open'),
+            $('html').removeClass('overflow__hidden');
         });
       });
       $(document).ready(function () {
         $('.menu-btn').click(function () {
-          $('html').toggleClass('overflow__hidden'),
-            $('menu').toggleClass('overflow__scroll');
+          $('.menu').toggleClass('overflow__scroll');
         });
       });
 
