@@ -230,7 +230,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  bottom: 58%;
+  bottom: 24%;
   margin-left: 20px;
 }
 
@@ -424,7 +424,7 @@
 @media screen and (max-width: 1140px) {
   .MV_text {
     font-size: 32px;
-    bottom: 67%;
+    bottom: 35%;
     gap: 20px;
   }
 
@@ -465,7 +465,7 @@
 @media screen and (max-width: 930px) {
   .MV_text {
     font-size: 28px;
-    bottom: 65%;
+    bottom: 39%;
   }
   .MV_img {
     padding: 40px 0 80px;
@@ -582,12 +582,12 @@
     top: 62%;
   }
   .MV_text {
-    bottom: 68%;
+    bottom: 39%;
   }
 }
 @media screen and (max-width: 600px) {
   .MV_text {
-    bottom: 72%;
+    bottom: 46%;
   }
   .slick-prev,
   .slick-next {
@@ -596,7 +596,7 @@
 }
 @media screen and (max-width: 481px) {
   .MV_text {
-    bottom: 60%;
+    bottom: 21%;
   }
   .slick-prev,
   .slick-next {
@@ -605,7 +605,7 @@
 }
 @media screen and (max-width: 400px) {
   .MV_text {
-    bottom: 64%;
+    bottom: 31%;
   }
   .slick-prev,
   .slick-next {
