@@ -282,13 +282,16 @@
         $('.nav_btn').toggleClass('open');
         $('.nav').fadeToggle();
       })
-      $(document).ready(function () {
-        $('.menu-btn').click(function () {
-          $('body').toggleClass('overflow__hidden'),
-            $('menu').toggleClass('overflow__scroll');
-        });
-      })
-    })
+      $('.header_slider').slick({
+        autoplay: true,
+        autoplaySpeed: 5000,
+      });
+    });
+    window.onload = function () {
+      const spinner = document.getElementById('loading');
+      spinner.classList.add('loaded');
+    }
+    $('#search-imput').quicksearch('.keyword');
   </script>
   <script>
     jQuery.noConflict();
@@ -298,11 +301,22 @@
         var $body = $('body');
         //開閉用ボタンをクリックでクラスの切替え
         $('#js__btn').on('click', function () {
-          $body.toggleClass('open');
+          $body.toggleClass('open'),
+            $('html').toggleClass('overflow__hidden');
         });
-        //メニュー名以外の部分をクリックで閉じる
-        $('#js__nav').on('click', function () {
-          $body.removeClass('open');
+        // モーダル外をクリックした時に閉じる
+        // 画面全体のクリックを検知
+        $(document).on('click', function (e) {
+          // モーダルが開いている時 & クリックされた対象がモーダル外の時
+          if ($body.hasClass('open') && !$(e.target).closest('#js__nav, #js__btn').length) {
+            $body.removeClass('open');
+            $('html').removeClass('overflow__hidden');
+          }
+        });
+      });
+      $(document).ready(function () {
+        $('.menu-btn').click(function () {
+          $('.menu').toggleClass('overflow__scroll');
         });
       });
 

@@ -266,31 +266,45 @@
         $('.nav_btn').toggleClass('open');
         $('.nav').fadeToggle();
       })
+      $('.header_slider').slick({
+        autoplay: true,
+        autoplaySpeed: 5000,
+      });
+    });
+    window.onload = function () {
+      const spinner = document.getElementById('loading');
+      spinner.classList.add('loaded');
+    }
+    $('#search-imput').quicksearch('.keyword');
+  </script>
+  <script>
+    jQuery.noConflict();
+    (function ($) {
+
+      $(function () {
+        var $body = $('body');
+        //開閉用ボタンをクリックでクラスの切替え
+        $('#js__btn').on('click', function () {
+          $body.toggleClass('open'),
+            $('html').toggleClass('overflow__hidden');
+        });
+        // モーダル外をクリックした時に閉じる
+        // 画面全体のクリックを検知
+        $(document).on('click', function (e) {
+          // モーダルが開いている時 & クリックされた対象がモーダル外の時
+          if ($body.hasClass('open') && !$(e.target).closest('#js__nav, #js__btn').length) {
+            $body.removeClass('open');
+            $('html').removeClass('overflow__hidden');
+          }
+        });
+      });
       $(document).ready(function () {
         $('.menu-btn').click(function () {
-          $('body').toggleClass('overflow__hidden'),
-          $('menu').toggleClass('overflow__scroll');
-      });
-    })
-    })
-  </script>
-    <script>
-      jQuery.noConflict();
-      (function ($) {
-  
-        $(function () {
-          var $body = $('body');
-          //開閉用ボタンをクリックでクラスの切替え
-          $('#js__btn').on('click', function () {
-            $body.toggleClass('open');
-          });
-          //メニュー名以外の部分をクリックで閉じる
-          $('#js__nav').on('click', function () {
-            $body.removeClass('open');
-          });
+          $('.menu').toggleClass('overflow__scroll');
         });
-  
-      }(jQuery));
-    </script>
+      });
+
+    }(jQuery));
+  </script>
 </body>
 </html>
