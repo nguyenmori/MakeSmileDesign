@@ -223,6 +223,10 @@
   position: relative;
 }
 
+.WORKS .picture {
+  display: block;
+}
+
 /* MVテキスト部分 */
 .MV_text {
   font-size: 40px;
