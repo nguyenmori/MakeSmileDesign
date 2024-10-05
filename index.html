@@ -28,6 +28,9 @@
     })(document);
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/DeuxHuitHuit/quicksearch/dist/jquery.quicksearch.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.quicksearch.min.js"></script>
 </head>
 
 <body class="TOP">
@@ -552,9 +555,9 @@
       </div>
       <div class="search_wrapper">
         <div class="search_window">
-          <form action="#" class="search-form-5">
+          <form action="./Works.html" class="search-form-5">
             <label>
-              <input type="text" placeholder="Search" id="search-input">
+              <input type="text" placeholder="Search" id="search-input" onclick="msgdsp()">
             </label>
             <button type="submit" aria-label="検索"></button>
           </form>
@@ -580,10 +583,9 @@
       <div class="sub_navi_block">
         <p class="head">キーワード</p>
         <ul class="sub_navi_list">
-          <li class="key_box keyword">バナー</li>
-          <li class="key_box keyword">LP</li>
-          <li class="key_box keyword">バナー</li>
-          <li class="key_box keyword">LP</li>
+          <li class="key_box keyword"><a href="./Works_banner.html">バナー</a></li>
+          <li class="key_box keyword"><a href="./Works_LP.html">LP</a></li>
+          <li class="key_box keyword"><a href="./Works_coding.html">コーディング</a></li>
           <!-- <li> <a class="navi_items" href="https://nguyenmori.github.io/MakeSmileDesign//tag/banner/">バナー</a></li>
             <li> <a class="navi_items" href="https://nguyenmori.github.io/MakeSmileDesign//tag/LP/">LP</a></li> -->
         </ul>
@@ -605,7 +607,7 @@
       </div>
     </div>
     <div class="footer_right">
-      <small>©︎ MAKE SMILE DESIGN All Rights Reserved.</small>
+      <small>©︎ 2024 MAKE SMILE DESIGN All Rights Reserved.</small>
       <a href="#"><img src="image/page＿Top.svg" alt="Topに戻る" class="top_page"></a>
     </div>
     <div class="nico3 nico_footer"><img src="./image/nico3.svg" alt=""></div>
@@ -655,6 +657,10 @@
       });
 
     }(jQuery));
+    $('#search-input').quicksearch('.keyword');
+    function msgdsp() {
+           alert("現在検索機能は実装されてません。");
+       }
   </script>
 </body>
 

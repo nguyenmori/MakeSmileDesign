@@ -1466,6 +1466,11 @@ h2 {
   padding: 8px 16px;
   border-radius: 34px;
   text-align: center;
+  transition: 0.4s;
+}
+.sub_navi_block ul .key_box:hover{
+  background-color: #f57096;
+  color: #fff;
 }
 
 .sub_navi_block ul a.sns {

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <title>Design CAFEさま</title>
+  <title>Works</title>
   <link rel="icon" href="image/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,11 +23,11 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body class="WORKS">
   <header class="header">
     <div class="header_left">
       <div class="logo">
@@ -78,18 +78,15 @@
     </div>
   </header>
   <main>
-    <section class="main_visual Works_content_MV">
-      <div class="MV">
-        <div class="prev"><a href="./Works02.html"><img src="image/PREV_arrow.svg" alt=""></a></div>
-        <div class="MV_img">
+    <section class="main_visual Works_MV">
+      <div class="MV_img">
+        <div class="picture">
           <picture>
-            <source srcset="./image/design_cafe_WORKES.png" media="(max-width:481px)">
-            <source srcset="./image/design_cafe_FV6.png" media="(max-width:800px)">
-            <source srcset="./image/design_cafe_FV7.png" media="(max-width:1230px)">
-            <img src="./image/design_cafe_FV1.png" alt="">
+            <source srcset="./image/works_sp@2x-100.jpg" media="(max-width:491px)">
+            <source srcset="./image/works_FV_800px@2x-100.jpg" media="(max-width:800px)">
+            <img src="image/Works_FV_PC@2x-100.jpg" alt="">
           </picture>
         </div>
-        <div class="next"><a href="./Works04.html"><img src="image/NEXT_arrow.svg" alt=""></a></div>
       </div>
       <div class="scroll-infinity">
         <div class="scroll-infinity__wrap MV-scroll-infinity__wrap">
@@ -112,66 +109,100 @@
         </div>
       </div>
     </section>
-    <section class="Works_container Works_block">
+    <section class="Works_container">
       <div class="Works_title">
         <h2>Works</h2>
         <p>制作実績</p>
       </div>
-      <div class="Works_Content">
-        <h3>Design CAFEさま</h3>
-        <ul class="Works_content_block">
-          <li class="Works_small_block">
-            <h4>担当</h4>
-            <p>コーディング</p>
-          </li>
-          <li class="Works_small_block">
-            <h4>制作期間</h4>
-            <p>4週間</p>
-          </li>
-          <li class="Works_small_block">
-            <h4>料金</h4>
-            <p>Sample</p>
-          </li>
-          <li class="Works_small_block">
-            <h4>使用ツール</h4>
-            <div class="skill_key">
-            <p class="VisualStudioCode">VisualStudioCode</p>
-            <p class="GitHub">GitHub</p>
+      <div class="Works">
+        <div class="works_box">
+          <div class="works_img">
+            <a href="./Works03.html"><img src="image/design_cafe_WORKES.png" alt=""></a>
+            <div class="around_text_box">
+              <div class="around_text_block block1">
+                <p>
+                  <span>coding</span>
+                  <span>sample</span>
+                  <span>coding</span>
+                </p>
+              </div>
+              <div class="around_text_block block2">
+                <p>
+                  <span>sample</span>
+                  <span>coding</span>
+                  <span>sample</span>
+                </p>
+              </div>
+              <div class="around_text_block block3">
+                <p>
+                  <span>coding</span>
+                  <span>sample</span>
+                  <span>coding</span>
+                </p>
+              </div>
+              <div class="around_text_block block4">
+                <p>
+                  <span>sample</span>
+                  <span>coding</span>
+                  <span>sample</span>
+                </p>
+              </div>
             </div>
-          </li>
-        </ul>
-        <div class="Works_overview_point">
-          <ul>
-            <li class="overview">
-              <h4>制作概要</h4>
-              <p>
-                デザインカンプをもとにHTML/CSS/JavaScript/jQuery使用してサイトのコーディングを行いました。
-              </p>
-            </li>
-            <li class="point">
-              <h4>制作ポイント</h4>
-              <ul>
-                <li><p>共通部分や同じレイアウトのものをグループ化して、コードを見やすくしました。</p></li>
-                <li><p>レスポンシブにも対応させるために固定値で崩れてしまうところは％表示を使用しています。</p></li>
-                <li><p>ファーストビューとギャラリーの箇所はスライドショーを実装しました。</p></li>
-                <li><p>スマートフォン版のサイトにはハンバーガーメニュウを実装しています。</p></li>
-              </ul>
-            </li>
-          </ul>
+          </div>
+          <h3>Design CAFEさま</h3>
+          <div class="key">
+            <p>コーディング</p>
+            <p>カフェ</p>
+            <p>ベージュ色</p>
+            <p>LP</p>
+            <p>シンプル</p>
+            <p>Sample</p>
+          </div>
         </div>
-        <div class="Works_images">
-          <ul>
-            <li class="PC">
-              <h4>PC版</h4>
-              <img src="image/DesignCAFE_LP_PC.png" alt="PC版">
-            </li>
-            <li class="SP">
-              <h4>スマホ版</h4>
-              <img src="image/DesignCAFE_LP_sp.png" alt="SP版">
-              <img src="image/" alt="">
-            </li>
-          </ul>
-        </div>
+        <!-- <div class="works_box">
+          <div class="works_img">
+            <a href="./Works02.html"><img src="image/salon.LP_WORKES.png" alt=""></a>
+            <div class="around_text_box">
+              <div class="around_text_block block1">
+                <p>
+                  <span>LP</span>
+                  <span>sample</span>
+                  <span>LP</span>
+                </p>
+              </div>
+              <div class="around_text_block block2">
+                <p>
+                  <span>sample</span>
+                  <span>LP</span>
+                  <span>sample</span>
+                </p>
+              </div>
+              <div class="around_text_block block3">
+                <p>
+                  <span>LP</span>
+                  <span>sample</span>
+                  <span>LP</span>
+                </p>
+              </div>
+              <div class="around_text_block block4">
+                <p>
+                  <span>sample</span>
+                  <span>LP</span>
+                  <span>sample</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <h3>LIFE hair designさま</h3>
+          <div class="key">
+            <p>LP</p>
+            <p>ピンク</p>
+            <p>女性</p>
+            <p>シンプル</p>
+            <p>綺麗</p>
+            <p>Sample</p>
+          </div>
+        </div> -->
       </div>
     </section>
     <section class="contact_container">
@@ -263,6 +294,7 @@
       <small>©︎ 2024 MAKE SMILE DESIGN All Rights Reserved.</small>
       <a href="#"><img src="image/page＿Top.svg" alt="Topに戻る" class="top_page"></a>
     </div>
+    <div class="nico1 nico_footer"><img src="./image/nico.svg" alt=""></div>
   </footer>
   <script>
     $(function () {
