@@ -642,9 +642,10 @@
             $('html').toggleClass('overflow__hidden');
         });
         //メニュー名以外の部分をクリックで閉じる
-        $('#js__nav').on('click',function(e) {
-    if(!$(e.target).closest('menu').length) {
-      container.removeClass('open');
+        $(document).on('click',function(e) {
+    if($body.hasClass('open')&&!$(e.target).closest('#js__btn,#js__nav').length) {
+     $body.removeClass('open');
+     $('html').removeClass('overflow__hidden');
     }
   });
         $('#js__nav').on('click', function () {
