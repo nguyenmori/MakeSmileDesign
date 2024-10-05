@@ -2319,6 +2319,8 @@ h2 {
 .Works_content_block {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  height: 192px;
 }
 
 .Works_small_block {
@@ -2405,6 +2407,29 @@ h2 {
   margin-bottom: 40px;
 }
 
+.overview p,
+.point p {
+  line-height: 1.4;
+}
+.point ul {
+  border: none;
+  padding: 0;
+}
+.point p {
+  margin-bottom: 10px;
+}
+
+.point p::before {
+  content: "○";
+  margin-right: 10px;
+}
+.point .last_point {
+  color: #f58196;
+}
+.point .last_point::before {
+  content: none;
+}
+
 .Works_images h4 {
   margin-bottom: 48px;
 }
@@ -2442,6 +2467,12 @@ h2 {
 @media screen and (max-width: 980px) {
   .MV_img {
     margin: 0 auto;
+  }
+  .Works_content_block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
   }
 }
 @media screen and (max-width: 800px) {

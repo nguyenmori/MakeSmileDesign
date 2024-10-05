@@ -23,8 +23,8 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -135,8 +135,8 @@
           <li class="Works_small_block">
             <h4>使用ツール</h4>
             <div class="skill_key">
-            <p class="photoshop">Adobe Photoshop</p>
-            <p class="Illustrator">Adobe Illustrator</p>
+              <p class="photoshop">Adobe Photoshop</p>
+              <p class="Illustrator">Adobe Illustrator</p>
             </div>
           </li>
         </ul>
@@ -145,14 +145,30 @@
             <li class="overview">
               <h4>制作概要</h4>
               <p>
-                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                架空のモバイル会社さまの春の限定セールを開催する告知WEB用のバナー広告です。<br>
+                新生活をスタートさせる学生さん向けにお得なプランが新登場したことを広く知らせ、購入促進を図っています。
               </p>
             </li>
             <li class="point">
               <h4>制作ポイント</h4>
-              <p>
-                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-              </p>
+              <ul>
+                <li>
+                  <p>
+                    春の限定セールということで、桜のあしらいを使う＆ピンク系統で統一をさせることで、『春』『新生活』を連想してもらえるようにしてます。
+                  </p>
+                </li>
+                <li>
+                  <p>手とスマホの切り抜き画像を使用することで、バナーを見た時に、スマートフォンに関する広告であることがすぐ分かるように制作をしました。</p>
+                </li>
+                <li>
+                  <p>背景にピンクのグラデーション×ノイズのテクスチャを使用することで、奥行きのあるデザインにしました。</p>
+                </li>
+                 <li>
+                  <p>使用カラーはピンク・黄色・水色を使用することで10代後半から20代前半の方に受け入れられやすいようデザインをしました。</p>
+                </li>
+                <li><p class="last_point">※こちらはトレースしたものです。
+                </p></li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -269,29 +285,29 @@
       $(document).ready(function () {
         $('.menu-btn').click(function () {
           $('body').toggleClass('overflow__hidden'),
-          $('menu').toggleClass('overflow__scroll');
-      });
-    })
+            $('menu').toggleClass('overflow__scroll');
+        });
+      })
     })
   </script>
-    <script>
-      jQuery.noConflict();
-      (function ($) {
-  
-        $(function () {
-          var $body = $('body');
-          //開閉用ボタンをクリックでクラスの切替え
-          $('#js__btn').on('click', function () {
-            $body.toggleClass('open');
-          });
-          //メニュー名以外の部分をクリックで閉じる
-          $('#js__nav').on('click', function () {
-            $body.removeClass('open');
-          });
+  <script>
+    jQuery.noConflict();
+    (function ($) {
+
+      $(function () {
+        var $body = $('body');
+        //開閉用ボタンをクリックでクラスの切替え
+        $('#js__btn').on('click', function () {
+          $body.toggleClass('open');
         });
-  
-      }(jQuery));
-    </script>
+        //メニュー名以外の部分をクリックで閉じる
+        $('#js__nav').on('click', function () {
+          $body.removeClass('open');
+        });
+      });
+
+    }(jQuery));
+  </script>
 </body>
 
 </html>

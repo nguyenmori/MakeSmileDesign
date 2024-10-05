@@ -554,7 +554,7 @@
         <div class="search_window">
           <form action="#" class="search-form-5">
             <label>
-              <input type="text" placeholder="Search">
+              <input type="text" placeholder="Search" id="search-input">
             </label>
             <button type="submit" aria-label="検索"></button>
           </form>
@@ -580,14 +580,10 @@
       <div class="sub_navi_block">
         <p class="head">キーワード</p>
         <ul class="sub_navi_list">
-          <li class="key_box">バナー</li>
-          <li class="key_box">LP</li>
-          <li class="key_box">バナー</li>
-          <li class="key_box">LP</li>
-          <li class="key_box">バナー</li>
-          <li class="key_box">LP</li>
-          <li class="key_box">バナー</li>
-          <li class="key_box">LP</li>
+          <li class="key_box keyword">バナー</li>
+          <li class="key_box keyword">LP</li>
+          <li class="key_box keyword">バナー</li>
+          <li class="key_box keyword">LP</li>
           <!-- <li> <a class="navi_items" href="https://nguyenmori.github.io/MakeSmileDesign//tag/banner/">バナー</a></li>
             <li> <a class="navi_items" href="https://nguyenmori.github.io/MakeSmileDesign//tag/LP/">LP</a></li> -->
         </ul>
@@ -629,9 +625,10 @@
       const spinner = document.getElementById('loading');
       spinner.classList.add('loaded');
     }
+    $('#search-imput').quicksearch('.keyword');
   </script>
   <script>
-    jQuery.noConflict();
+     jQuery.noConflict();
     (function ($) {
 
       $(function () {
@@ -641,13 +638,15 @@
           $body.toggleClass('open'),
             $('html').toggleClass('overflow__hidden');
         });
-        //メニュー名以外の部分をクリックで閉じる
-        $(document).on('click',function(e) {
-    if($body.hasClass('open')&&!$(e.target).closest('#js__btn,#js__nav').length) {
-     $body.removeClass('open');
-     $('html').removeClass('overflow__hidden');
-    }
-  });
+        // モーダル外をクリックした時に閉じる
+        // 画面全体のクリックを検知
+        $(document).on('click', function (e) {
+          // モーダルが開いている時 & クリックされた対象がモーダル外の時
+          if ($body.hasClass('open') && !$(e.target).closest('#js__nav, #js__btn').length) {
+            $body.removeClass('open');
+            $('html').removeClass('overflow__hidden');
+          }
+        });
         $('#js__nav').on('click', function () {
           $body.removeClass('open'),
             $('html').removeClass('overflow__hidden');
