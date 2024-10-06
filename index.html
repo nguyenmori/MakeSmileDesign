@@ -52,10 +52,11 @@
       </div>
       <div class="daily_welcome">
         <div class="date_box">
-          <p class="year">2024</p>
-          <p class="month">10.</p>
-          <p class="date">7</p>
-          <p class="day">Mon.</p>
+          <p id="year"></p>
+          <p id="month"></p>
+          &#046;
+          <p id="date"></p>
+          <p id="day"></p>
         </div>
         <div class="scroll-infinity">
           <div class="scroll-infinity__wrap">
@@ -582,10 +583,10 @@
       </div>
       <div class="sub_navi_block">
         <p class="head">キーワード</p>
-        <ul class="sub_navi_list">
-          <li class="key_box keyword"><a href="./Works_banner.html">バナー</a></li>
-          <li class="key_box keyword"><a href="./Works_LP.html">LP</a></li>
-          <li class="key_box keyword"><a href="./Works_coding.html">コーディング</a></li>
+        <ul id=" keyword">
+          <li class="key_box key"><a href="./Works_banner.html">バナー</a></li>
+          <li class="key_box key"><a href="./Works_LP.html">LP</a></li>
+          <li class="key_box key"><a href="./Works_coding.html">コーディング</a></li>
           <!-- <li> <a class="navi_items" href="https://nguyenmori.github.io/MakeSmileDesign//tag/banner/">バナー</a></li>
             <li> <a class="navi_items" href="https://nguyenmori.github.io/MakeSmileDesign//tag/LP/">LP</a></li> -->
         </ul>
@@ -614,14 +615,17 @@
   </footer>
   <script>
     const today = new Date();
-    const weekday = ["Sun.","Mon.","Tue.","Wed.","Thu.","Fri.","Sat."];
-// 年・月・日・曜日を取得
-    const year = today.getFullYear();
-    const month = today.getMonth() + 1;
-    const date = today.getDate();
-    const day = today.getDay();
+    const weekday = ["Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat."];
+    // 年・月・日・曜日を取得
+    const y = today.getFullYear();
+    const m = today.getMonth() + 1;
+    const d = today.getDate();
+    const w = today.getDay();
 
-    console.log(year);
+    document.getElementById('year').textContent = y;
+    document.getElementById('month').textContent = m;
+    document.getElementById('date').textContent = d;
+    document.getElementById('day').textContent = weekday[w];
   </script>
   <script>
     $(function () {
@@ -638,26 +642,26 @@
       const spinner = document.getElementById('loading');
       spinner.classList.add('loaded');
     }
-    $('#search-imput').quicksearch('.keyword');
+    $('#search-imput').quicksearch('#keyword');
   </script>
   <script>
-$(window).on('load', function(){
-  $('body').removeClass('fade');
-});
-$(function() {
-  // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
-  $('a:not([href^="#"]):not([target])').on('click', function(e){
-    e.preventDefault(); // ナビゲートをキャンセル
-    url = $(this).attr('href'); // 遷移先のURLを取得
-    if (url !== '') {
-      $('body').addClass('fade'); // bodyに class="fadeout"を挿入
-      setTimeout(function(){
-        window.location = url; // 0.8秒後に取得したURLに遷移
-      }, 800);
-    }
-    return false;
-  });
-});
+    $(window).on('load', function () {
+      $('body').removeClass('fade');
+    });
+    $(function () {
+      // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
+      $('a:not([href^="#"]):not([target])').on('click', function (e) {
+        e.preventDefault(); // ナビゲートをキャンセル
+        url = $(this).attr('href'); // 遷移先のURLを取得
+        if (url !== '') {
+          $('body').addClass('fade'); // bodyに class="fadeout"を挿入
+          setTimeout(function () {
+            window.location = url; // 0.8秒後に取得したURLに遷移
+          }, 800);
+        }
+        return false;
+      });
+    });
     jQuery.noConflict();
     (function ($) {
 
@@ -685,10 +689,10 @@ $(function() {
       });
 
     }(jQuery));
-    $('#search-input').quicksearch('.keyword');
+    $('#search-input').quicksearch('.key p');
     function msgdsp() {
-           alert("現在検索機能は実装されてません。");
-       }
+      alert("現在検索機能は実装されてません。");
+    }
   </script>
 </body>
 

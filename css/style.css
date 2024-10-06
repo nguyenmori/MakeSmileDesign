@@ -157,17 +157,17 @@ body.fade::after {
   gap: 8px;
 }
 
-.date_box .year {
+.date_box #year {
   font-size: 12px;
   transform: rotate(90deg);
 }
 
-.date_box .month,
-.date_box .date {
+.date_box #month,
+.date_box #date {
   font-size: 26px;
 }
 
-.date_box .day {
+.date_box #day {
   font-size: 12px;
   transform: rotate(-90deg);
 }

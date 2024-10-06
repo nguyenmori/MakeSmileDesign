@@ -35,10 +35,11 @@
       </div>
       <div class="daily_welcome">
         <div class="date_box">
-          <p class="year">2024</p>
-          <p class="month">10.</p>
-          <p class="date">7</p>
-          <p class="day">Mon.</p>
+          <p id="year"></p>
+          <p id="month"></p>
+          &#046;
+          <p id="date"></p>
+          <p id="day"></p>
         </div>
         <div class="scroll-infinity">
           <div class="scroll-infinity__wrap">
@@ -278,6 +279,18 @@
     </div>
   </footer>
   <script>
+        const today = new Date();
+    const weekday = ["Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat."];
+    // 年・月・日・曜日を取得
+    const y = today.getFullYear();
+    const m = today.getMonth() + 1;
+    const d = today.getDate();
+    const w = today.getDay();
+
+    document.getElementById('year').textContent = y;
+    document.getElementById('month').textContent = m;
+    document.getElementById('date').textContent = d;
+    document.getElementById('day').textContent = weekday[w];
     $(function () {
       $('.nav_btn').on('click', function () {
         $('.nav_btn').toggleClass('open');
