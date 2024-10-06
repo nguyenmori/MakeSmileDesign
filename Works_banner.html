@@ -27,7 +27,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
-<body class="WORKS">
+<body class="WORKS fade">
   <header class="header">
     <div class="header_left">
       <div class="logo">
@@ -402,6 +402,23 @@
     $('#search-imput').quicksearch('.keyword');
   </script>
   <script>
+    $(window).on('load', function(){
+  $('body').removeClass('fade');
+});
+$(function() {
+  // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
+  $('a:not([href^="#"]):not([target])').on('click', function(e){
+    e.preventDefault(); // ナビゲートをキャンセル
+    url = $(this).attr('href'); // 遷移先のURLを取得
+    if (url !== '') {
+      $('body').addClass('fade'); // bodyに class="fadeout"を挿入
+      setTimeout(function(){
+        window.location = url; // 0.8秒後に取得したURLに遷移
+      }, 800);
+    }
+    return false;
+  });
+});
     jQuery.noConflict();
     (function ($) {
 

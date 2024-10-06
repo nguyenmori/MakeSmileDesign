@@ -613,6 +613,17 @@
     <div class="nico3 nico_footer"><img src="./image/nico3.svg" alt=""></div>
   </footer>
   <script>
+    const today = new Date();
+    const weekday = ["Sun.","Mon.","Tue.","Wed.","Thu.","Fri.","Sat."];
+// 年・月・日・曜日を取得
+    const year = today.getFullYear();
+    const month = today.getMonth() + 1;
+    const date = today.getDate();
+    const day = today.getDay();
+
+    console.log(year);
+  </script>
+  <script>
     $(function () {
       $('.nav_btn').on('click', function () {
         $('.nav_btn').toggleClass('open');
@@ -630,6 +641,23 @@
     $('#search-imput').quicksearch('.keyword');
   </script>
   <script>
+$(window).on('load', function(){
+  $('body').removeClass('fade');
+});
+$(function() {
+  // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
+  $('a:not([href^="#"]):not([target])').on('click', function(e){
+    e.preventDefault(); // ナビゲートをキャンセル
+    url = $(this).attr('href'); // 遷移先のURLを取得
+    if (url !== '') {
+      $('body').addClass('fade'); // bodyに class="fadeout"を挿入
+      setTimeout(function(){
+        window.location = url; // 0.8秒後に取得したURLに遷移
+      }, 800);
+    }
+    return false;
+  });
+});
     jQuery.noConflict();
     (function ($) {
 

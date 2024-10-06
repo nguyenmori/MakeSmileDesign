@@ -27,7 +27,7 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body class="fade">
   <header class="header">
     <div class="header_left">
       <div class="logo">
@@ -163,12 +163,23 @@
           <ul>
             <li class="PC">
               <h4>PC版</h4>
-              <img src="image/DesignCAFE_LP_PC.png" alt="PC版">
+              <img src="image/DesignCAFE_LP_PC.png" alt="PC版" class="works_pc">
+              <div class="works_sp">
+                <img src="image/SP_designcafe_WORKES_PC.png" alt="">
+                <div class="Works_btn">
+                  <a href="#">詳しく見てみる</a>
+                </div>
+              </div>
             </li>
             <li class="SP">
               <h4>スマホ版</h4>
-              <img src="image/DesignCAFE_LP_sp.png" alt="SP版">
-              <img src="image/" alt="">
+              <img src="image/DesignCAFE_LP_sp.png" alt="SP版" class="works_pc">
+              <div class="works_sp">
+                <img src="image/SP_designcafe_WORKES_SP@2x.png" alt="">
+                <div class="Works_btn">
+                  <a href="#">詳しく見てみる</a>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -282,6 +293,23 @@
     $('#search-imput').quicksearch('.keyword');
   </script>
   <script>
+    $(window).on('load', function(){
+  $('body').removeClass('fade');
+});
+$(function() {
+  // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
+  $('a:not([href^="#"]):not([target])').on('click', function(e){
+    e.preventDefault(); // ナビゲートをキャンセル
+    url = $(this).attr('href'); // 遷移先のURLを取得
+    if (url !== '') {
+      $('body').addClass('fade'); // bodyに class="fadeout"を挿入
+      setTimeout(function(){
+        window.location = url; // 0.8秒後に取得したURLに遷移
+      }, 800);
+    }
+    return false;
+  });
+});
     jQuery.noConflict();
     (function ($) {
 
