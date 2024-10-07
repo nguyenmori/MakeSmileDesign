@@ -995,7 +995,7 @@ body.fade::after {
 .Works {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 60px;
 }
 
@@ -1100,6 +1100,7 @@ h3 {
   .Works {
     gap: 40px;
     margin: 100px 60px;
+    justify-content: space-between;
   }
 }
 
