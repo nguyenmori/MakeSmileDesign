@@ -28,9 +28,6 @@
     })(document);
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/DeuxHuitHuit/quicksearch/dist/jquery.quicksearch.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.quicksearch.min.js"></script>
 </head>
 
 <body class="TOP">
@@ -85,10 +82,18 @@
     </div>
     <nav class="nav open">
       <ul>
-        <li><a href="./aboutme.html">About Me</a></li>
-        <li><a href="./Works.html">Works</a></li>
-        <li><a href="./contact.html">FAQ</a></li>
-        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./aboutme.html">
+            <p class="nav_title"><span>私について</span><span>About Me</span></p>
+          </a></li>
+        <li><a href="./Works.html">
+            <p class="nav_title"><span>制作実績</span><span>Works</span></p>
+          </a></li>
+        <li><a href="./contact.html">
+            <p class="nav_title"><span>ご依頼について</span><span>FAQ</span></p>
+          </a></li>
+        <li><a href="./contact.html">
+            <p class="nav_title"><span>お問い合わせ</span><span>Contact</span></p>
+          </a></li>
         <li class="sns_box"><a href="https://www.instagram.com/nguyenm_atz/" target="_blank"><img
               src="image/Instagram.svg" alt="" class="sns"></a><a href="https://x.com/NgyenM_azt1412"
             target="_blank"><img src="image/X.svg" alt="" class="sns"></a></li>
@@ -556,9 +561,9 @@
       </div>
       <div class="search_wrapper">
         <div class="search_window">
-          <form action="./Works.html" class="search-form-5">
+          <form method="get" action="https://nguyenmori.github.io/MakeSmileDesign/" class="search-form-5">
             <label>
-              <input type="text" placeholder="Search" id="search-input" onclick="msgdsp()">
+              <input type="text" placeholder="Search" id="search-input" onclick="msgdsp()" list="">
             </label>
             <button type="submit" aria-label="検索"></button>
           </form>
@@ -642,7 +647,6 @@
       const spinner = document.getElementById('loading');
       spinner.classList.add('loaded');
     }
-    $('#search-imput').quicksearch('#keyword');
   </script>
   <script>
     $(window).on('load', function () {
@@ -689,10 +693,36 @@
       });
 
     }(jQuery));
-    $('#search-input').quicksearch('.key p');
     function msgdsp() {
       alert("現在検索機能は実装されてません。");
     }
+    $('.key p').each((index, name) => {
+
+      console.log(name.textContent);
+      $(".key p").on("input", searchEvent);
+
+
+      function searchEvent() {
+        const results = [];
+        const inputText = $(this).val();
+
+        if (inputText) {
+          $(".key p").each((index, name) => {
+            if (name.textContent.indexOf(inputText) !== -1) {
+
+              results.push(name.textContent);
+
+            }
+          });
+          $(".Works").empty();
+
+          $.each(results, (index, name) => {
+            $(".Works").append("<p>" + name + "</p>");
+          });
+        }
+      }
+
+    })
   </script>
 </body>
 

@@ -67,10 +67,10 @@
       </div>
       <nav class="nav open">
         <ul>
-          <li><a href="./aboutme.html">About Me</a></li>
-          <li><a href="./Works.html">Works</a></li>
-          <li><a href="./contact.html">FAQ</a></li>
-          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./aboutme.html"><p class="nav_title"><span>私について</span><span>About Me</span></p></a></li>
+          <li><a href="./Works.html"><p class="nav_title"><span>制作実績</span><span>Works</span></p></a></li>
+          <li><a href="./contact.html"><p class="nav_title"><span>ご依頼について</span><span>FAQ</span></p></a></li>
+          <li><a href="./contact.html"><p class="nav_title"><span>お問い合わせ</span><span>Contact</span></p></a></li>
           <li class="sns_box"><a href="https://www.instagram.com/nguyenm_atz/" target="_blank"><img
                 src="image/Instagram.svg" alt="" class="sns"></a><a href="https://x.com/NgyenM_azt1412"
               target="_blank"><img src="image/X.svg" alt="" class="sns"></a></li>
@@ -298,16 +298,7 @@
         $('.nav_btn').toggleClass('open');
         $('.nav').fadeToggle();
       })
-      $('.header_slider').slick({
-        autoplay: true,
-        autoplaySpeed: 5000,
-      });
     });
-    window.onload = function () {
-      const spinner = document.getElementById('loading');
-      spinner.classList.add('loaded');
-    }
-    $('#search-imput').quicksearch('.keyword');
   </script>
   <script>
     $(window).on('load', function(){

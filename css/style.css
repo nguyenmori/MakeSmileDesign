@@ -355,17 +355,38 @@ body.fade::after {
   font-family: "vdl-gigamarujr", sans-serif;
   font-size: 18px;
   font-weight: 300;
+  width: 240px;
 }
 
-.nav li:hover {
+.nav li a {
+  display: block;
+}
+
+.nav li a p.nav_title {
+  display: flex;
+  font-family: "vdl-gigamarujr", sans-serif;
+  justify-content: space-between;
+}
+
+.nav li a span {
+  display: block;
+}
+.nav li a span:first-child {
+  font-family: "Zen Maru Gothic", serif, "ヒラギノ丸ゴ Pro W4",
+    "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
+  font-weight: 400;
+}
+
+.nav li a .nav_title:hover {
   color: #f57096;
 }
 
-.nav a {
+.nav a p{
   position: relative;
 }
 
-.nav a::after {
+.nav a p::after {
   position: absolute;
   left: 0;
   content: "";
@@ -378,7 +399,7 @@ body.fade::after {
   transition: 0.5s;
 }
 
-.nav a:hover::after {
+.nav a p:hover::after {
   visibility: visible;
   opacity: 1;
   transition: 0.5s;
@@ -1901,6 +1922,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 16px;
+  justify-content: center;
 }
 
 .sns {
