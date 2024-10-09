@@ -382,7 +382,7 @@ body.fade::after {
   color: #f57096;
 }
 
-.nav a p{
+.nav a p {
   position: relative;
 }
 
@@ -2036,7 +2036,8 @@ h2 {
 
 .AboutMe_title,
 .Skills_titel,
-.Works_title {
+.Works_title,
+.faq_title {
   display: flex;
   gap: 24px;
   align-items: baseline;
@@ -2046,7 +2047,8 @@ h2 {
 
 .AboutMe_title h2,
 .Skills_titel h2,
-.contact_title h2 {
+.contact_title h2,
+.faq_title h2 {
   color: #f58196;
   font-family: "vdl-gigamarujr", sans-serif;
   font-weight: 300;
@@ -2054,7 +2056,8 @@ h2 {
 
 .AboutMe_title p,
 .Skills_titel p,
-.contact_title p {
+.contact_title p,
+.faq_title p {
   font-size: 36px;
   color: #f58196;
   text-shadow: 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff,
@@ -2193,7 +2196,8 @@ h2 {
 @media screen and (max-width: 1140px) {
   .AboutMe_title,
   .Skills_titel,
-  .Works_title {
+  .Works_title,
+  .faq_title {
     flex-direction: column;
     gap: 0px;
   }
@@ -2218,7 +2222,8 @@ h2 {
 @media screen and (max-width: 800px) {
   .AboutMe_title,
   .Skills_titel,
-  .Works_title {
+  .Works_title,
+  .faq_title {
     flex-direction: column;
     gap: 14px;
     margin-bottom: 20px;
@@ -2226,7 +2231,8 @@ h2 {
   }
   .AboutMe_title p,
   .Skills_titel p,
-  .contact_title p {
+  .contact_title p,
+  .faq_title p {
     font-size: 16px;
   }
 
@@ -2593,7 +2599,81 @@ h2 {
     box-shadow: none;
   }
 }
+/* FAQページ */
+.faq_block {
+  margin: 2%;
+}
 
+.qa-1 {
+  max-width: 1100px;
+  margin-bottom: 4%;
+  border: 1px solid #1f1e00;
+  border-radius: 25px;
+  background-color: #fff9e5;
+}
+
+.qa-1 summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1em 2em 1em 3em;
+  color: #1f1e00;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.qa-1 summary::before,
+.qa-1 p::before {
+  position: absolute;
+  left: 1em;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+.qa-1 summary::before {
+  color: #71cac6;
+
+  content: "Q";
+}
+
+.qa-1 summary::after {
+  transform: translateY(-25%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  margin-left: 10px;
+  border-bottom: 3px solid #f58196;
+  border-right: 3px solid #f58196;
+  content: "";
+  transition: transform 0.5s;
+  color: #f58196;
+}
+
+.qa-1[open] summary::after {
+  transform: rotate(225deg);
+}
+
+.qa-1 p {
+  position: relative;
+  transform: translateY(-10px);
+  opacity: 0;
+  margin: 0;
+  padding: 0.3em 3em 1.5em;
+  color: #1f1e00;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.qa-1[open] p {
+  transform: none;
+  opacity: 1;
+  line-height: 1.4;
+}
+
+.qa-1 p::before {
+  color: #f57096;
+  content: "A";
+}
 /* コンタクトフォームページ */
 .contact_title {
   display: flex;

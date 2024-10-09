@@ -75,7 +75,8 @@ body::-webkit-scrollbar-thumb {
 .contact_container,
 .AboutMe,
 .Skills,
-.contact_page_container {
+.contact_page_container,
+.faq_container {
   max-width: 1100px;
   margin: 100px auto;
 }
@@ -95,7 +96,8 @@ body::-webkit-scrollbar-thumb {
   .contact_container,
   .AboutMe,
   .Skills,
-  .contact_page_container {
+  .contact_page_container,
+  .faq_container {
     max-width: 980px;
     margin: 100px auto;
   }
@@ -104,7 +106,8 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 980px) {
   .concept,
   .Works_container,
-  .contact_container {
+  .contact_container,
+  .faq_container {
     margin: 100px 10px;
   }
 }
