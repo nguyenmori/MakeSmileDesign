@@ -69,10 +69,18 @@
       </div>
       <nav class="nav open">
         <ul>
-          <li><a href="./aboutme.html"><p class="nav_title"><span>私について</span><span>About Me</span></p></a></li>
-          <li><a href="./Works.html"><p class="nav_title"><span>制作実績</span><span>Works</span></p></a></li>
-          <li><a href="./FAQ.html"><p class="nav_title"><span>ご依頼について</span><span>FAQ</span></p></a></li>
-          <li><a href="./contact.html"><p class="nav_title"><span>お問い合わせ</span><span>Contact</span></p></a></li>
+          <li><a href="./aboutme.html">
+              <p class="nav_title"><span>私について</span><span>About Me</span></p>
+            </a></li>
+          <li><a href="./Works.html">
+              <p class="nav_title"><span>制作実績</span><span>Works</span></p>
+            </a></li>
+          <li><a href="./FAQ.html">
+              <p class="nav_title"><span>ご依頼について</span><span>FAQ</span></p>
+            </a></li>
+          <li><a href="./contact.html">
+              <p class="nav_title"><span>お問い合わせ</span><span>Contact</span></p>
+            </a></li>
           <li class="sns_box"><a href="https://www.instagram.com/nguyenm_atz/" target="_blank"><img
                 src="image/Instagram.svg" alt="" class="sns"></a><a href="https://x.com/NgyenM_azt1412"
               target="_blank"><img src="image/X.svg" alt="" class="sns"></a></li>
@@ -471,6 +479,15 @@
           </div>
         </div>
       </div>
+      <!-- <ol class="pagination-1">
+        <li class="page_prev"><a href="#">&lt;</a></li>
+        <li><a href="#">1</a></li>
+        <li class="current"><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li class="page_next"><a href="#">&gt;</a></li>
+    </ol> -->
     </section>
     <section class="contact_container">
       <div class="border">
@@ -564,7 +581,7 @@
     <div class="nico1 nico_footer"><img src="./image/nico.svg" alt=""></div>
   </footer>
   <script>
-        const today = new Date();
+    const today = new Date();
     const weekday = ["Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat."];
     // 年・月・日・曜日を取得
     const y = today.getFullYear();
@@ -584,23 +601,23 @@
     });
   </script>
   <script>
-    $(window).on('load', function(){
-  $('body').removeClass('fade');
-});
-$(function() {
-  // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
-  $('a:not([href^="#"]):not([target])').on('click', function(e){
-    e.preventDefault(); // ナビゲートをキャンセル
-    url = $(this).attr('href'); // 遷移先のURLを取得
-    if (url !== '') {
-      $('body').addClass('fade'); // bodyに class="fadeout"を挿入
-      setTimeout(function(){
-        window.location = url; // 0.8秒後に取得したURLに遷移
-      }, 800);
-    }
-    return false;
-  });
-});
+    $(window).on('load', function () {
+      $('body').removeClass('fade');
+    });
+    $(function () {
+      // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
+      $('a:not([href^="#"]):not([target])').on('click', function (e) {
+        e.preventDefault(); // ナビゲートをキャンセル
+        url = $(this).attr('href'); // 遷移先のURLを取得
+        if (url !== '') {
+          $('body').addClass('fade'); // bodyに class="fadeout"を挿入
+          setTimeout(function () {
+            window.location = url; // 0.8秒後に取得したURLに遷移
+          }, 800);
+        }
+        return false;
+      });
+    });
     jQuery.noConflict();
     (function ($) {
 
@@ -629,35 +646,35 @@ $(function() {
 
     }(jQuery));
     function msgdsp() {
-           alert("現在検索機能は実装されてません。");
-       }
-       $('.key p').each((index, name) => {
+      alert("現在検索機能は実装されてません。");
+    }
+    $('.key p').each((index, name) => {
 
-console.log(name.textContent);
-$(".key p").on("input", searchEvent);
+      console.log(name.textContent);
+      $(".key p").on("input", searchEvent);
 
 
-function searchEvent() {
-  const results = [];
-  const inputText = $(this).val();
+      function searchEvent() {
+        const results = [];
+        const inputText = $(this).val();
 
-  if (inputText) {
-    $(".key p").each((index, name) => {
-      if (name.textContent.indexOf(inputText) !== -1) {
+        if (inputText) {
+          $(".key p").each((index, name) => {
+            if (name.textContent.indexOf(inputText) !== -1) {
 
-        results.push(name.textContent);
+              results.push(name.textContent);
 
+            }
+          });
+          $(".Works").empty();
+
+          $.each(results, (index, name) => {
+            $(".Works").append("<p>" + name + "</p>");
+          });
+        }
       }
-    });
-    $(".Works").empty();
 
-    $.each(results, (index, name) => {
-      $(".Works").append("<p>" + name + "</p>");
-    });
-  }
-}
-
-})
+    })
   </script>
 </body>
 

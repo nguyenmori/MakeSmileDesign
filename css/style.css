@@ -1479,9 +1479,20 @@ h2 {
   padding: 4px 16px;
 }
 
+.menu .main_menu li:hover {
+  border: 1px solid #fff;
+  background-color: #f58196;
+  transition: 0.4s;
+}
+
 .navi_items {
   display: flex;
   justify-content: space-between;
+}
+
+.navi_items:hover {
+  color: #fff;
+  transition: 0.4s;
 }
 
 .menu .main_menu li span {
@@ -2336,6 +2347,36 @@ h2 {
     -1px -1px 1px #fff;
 }
 
+.pagination-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 8px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.pagination-1 a {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 2em;
+  border: 1px solid #71cac6;
+  border-radius: 25px;
+  color: #71cac6;
+}
+
+.pagination-1 a:not(:hover) {
+  text-decoration: none;
+}
+
+.pagination-1 .current a {
+  background-color: #71cac6;
+  color: #fff;
+  pointer-events: none;
+}
 @media screen and (max-width: 980px) {
   .Works {
     justify-content: space-between;
@@ -2675,7 +2716,7 @@ h2 {
   content: "A";
 }
 
-.qa-1-img{
+.qa-1-img {
   display: block;
   width: 80%;
   margin: 10px auto;
