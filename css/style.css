@@ -2674,6 +2674,12 @@ h2 {
   color: #f57096;
   content: "A";
 }
+
+.qa-1-img{
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+}
 /* コンタクトフォームページ */
 .contact_title {
   display: flex;
