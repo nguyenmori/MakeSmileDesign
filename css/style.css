@@ -458,12 +458,6 @@ body.fade::after {
     max-width: 1000px;
   }
 }
-@media screen and (max-width: 1230px) {
-  .MV_img {
-    margin-left: 7%;
-  }
-}
-
 @media screen and (max-width: 1162px) {
   .MV_img {
     width: 100%;
