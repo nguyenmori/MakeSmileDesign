@@ -20,6 +20,9 @@ li {
   font-family: "Zen Maru Gothic", serif, "ヒラギノ丸ゴ Pro W4",
     "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3",
     "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
+    overflow-wrap: anywhere; /* 収まらない場合に折り返す */
+    word-break: normal; /* 単語の分割はデフォルトに依存 */
+    line-break: strict;
 }
 
 .overflow__hidden {
