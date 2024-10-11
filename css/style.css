@@ -1011,7 +1011,7 @@ body.fade::after {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 60px;
+  gap: 100px;
 }
 
 .Works_top
