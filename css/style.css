@@ -1020,6 +1020,10 @@ body.fade::after {
   gap: 60px;
 }
 
+.Works_top
+{
+  justify-content: space-between;
+}
 .works_box {
   width: 300px;
   overflow: hidden;
