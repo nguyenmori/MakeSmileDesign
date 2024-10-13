@@ -1752,12 +1752,20 @@ h2 {
   }
 }
 @media screen and (max-width: 980px) {
+  .contact_container{
+    height: 360px;
+  }
+
   .contact_container p {
     font-size: 16px;
   }
 
+.border{
+  padding: 30px;
+}
+
   .contact_illust {
-    width: 400px;
+    width: 260px;
     height: 264px;
   }
 
