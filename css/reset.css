@@ -20,13 +20,37 @@ li {
   font-family: "Zen Maru Gothic", serif, "ヒラギノ丸ゴ Pro W4",
     "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3",
     "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
-    overflow-wrap: anywhere; /* 収まらない場合に折り返す */
-    word-break: normal; /* 単語の分割はデフォルトに依存 */
-    line-break: strict;
+  overflow-wrap: anywhere; /* 収まらない場合に折り返す */
+  word-break: normal; /* 単語の分割はデフォルトに依存 */
+  line-break: strict;
 }
 
 .overflow__hidden {
   overflow: hidden;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #fff;
+  border: 1px solid #1f1e00;
+  border-radius: 22px;
+  display: inline-block;
+  padding: 4px 0;
+  margin: 4px 4px;
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #71cac6;
+  color: #fff;
 }
 
 a {

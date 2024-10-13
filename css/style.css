@@ -1014,13 +1014,15 @@ body.fade::after {
   gap: 100px;
 }
 
-.Works_top
-{
+.Works_top {
   justify-content: space-between;
 }
 .works_box {
   width: 300px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .works_img {
@@ -1050,6 +1052,12 @@ h3 {
   font-size: 24px;
   font-weight: 500;
   margin: 24px 0px 10px 8px;
+}
+
+.key {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .key p {
