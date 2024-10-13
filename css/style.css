@@ -2892,17 +2892,23 @@ button img {
   .form_content label {
     font-size: 20px;
   }
-  .FAQ .contact_illust{
-    width: 400px;
-  }
   .FAQ .contact_container{
     height: 360px;
   }
   .FAQ .border{
     padding: 30px;
   }
+  .FAQ .contact_text_top h2{
+    font-size: 64px;
+  }
 }
 @media screen and (max-width: 800px) {
+  .FAQ .contact_text_top h2{
+    font-size: 36px;
+  }
+  .FAQ .contact_container{
+    height: 488px;
+  }
   .contact_title {
     flex-direction: column;
     margin-bottom: 34px;
