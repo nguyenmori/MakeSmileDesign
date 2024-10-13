@@ -1136,6 +1136,7 @@ h3 {
     justify-content: space-around;
     gap: 40px;
   }
+
 }
 
 /* SP版 */
@@ -1752,20 +1753,12 @@ h2 {
   }
 }
 @media screen and (max-width: 980px) {
-  .contact_container{
-    height: 360px;
-  }
-
   .contact_container p {
     font-size: 16px;
   }
 
-.border{
-  padding: 30px;
-}
-
   .contact_illust {
-    width: 260px;
+    width: 400px;
     height: 264px;
   }
 
@@ -2898,6 +2891,15 @@ button img {
 @media screen and (max-width: 900px) {
   .form_content label {
     font-size: 20px;
+  }
+  .FAQ .contact_illust{
+    width: 376px;
+  }
+  .contact_container{
+    height: 360px;
+  }
+  .border{
+    padding: 30px;
   }
 }
 @media screen and (max-width: 800px) {
