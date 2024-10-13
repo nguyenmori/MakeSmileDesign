@@ -99,6 +99,7 @@ body::-webkit-scrollbar-thumb {
 .main_container,
 .concept,
 .Works_container,
+.Works_Content,
 .contact_container,
 .AboutMe,
 .Skills,
@@ -128,11 +129,15 @@ body::-webkit-scrollbar-thumb {
     max-width: 980px;
     margin: 100px auto;
   }
+  .Works_Content{
+    max-width: 980px;
+  }
 }
 
 @media screen and (max-width: 980px) {
   .concept,
   .Works_container,
+
   .contact_container,
   .faq_container {
     margin: 100px 10px;
