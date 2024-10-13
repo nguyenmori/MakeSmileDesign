@@ -2893,12 +2893,12 @@ button img {
     font-size: 20px;
   }
   .FAQ .contact_illust{
-    width: 376px;
+    width: 400px;
   }
   .FAQ .contact_container{
     height: 360px;
   }
-  .FAQ.border{
+  .FAQ .border{
     padding: 30px;
   }
 }
