@@ -2895,10 +2895,10 @@ button img {
   .FAQ .contact_illust{
     width: 376px;
   }
-  .contact_container{
+  .FAQ .contact_container{
     height: 360px;
   }
-  .border{
+  .FAQ.border{
     padding: 30px;
   }
 }
