@@ -258,7 +258,7 @@
     </section>
     <section class="Works_container">
       <div class="Works Works_top">
-        <div class="works_box">
+        <div class="works_box" data-name="HP pink POP coding responsive Works">
           <div class="works_img">
             <a href="./Works00.html"><img src="image/portfolio_WORKES_@2x.png" alt=""></a>
             <div class="around_text_box">
@@ -294,12 +294,12 @@
           </div>
           <h3>Make Smile Design</h3>
           <div class="key">
-            <p>HP</p>
-            <p>ピンク</p>
-            <p>POP</p>
-            <p>コーディング</p>
-            <p>レスポンシブ</p>
-            <p>Works</p>
+            <button  class="button" data-name="HP">HP</button>
+            <button  class="button" data-name="pink">ピンク色</button>
+            <button  class="button" data-name="pop">POP</button>
+            <button  class="button" data-name="coding">コーディング</button>
+            <button  class="button" data-name="responsive">レスポンシブ</button>
+            <button class="button" data-name="Works">Works</button>
           </div>
         </div>
         <div class="works_box" data-name="banner pop comic orange yellow sample">
@@ -730,6 +730,12 @@
     const filterContent=(e)=>{
       document.querySelector(".active").classList.remove("active");
       e.target.classList.add("active");
+
+      works_box.forEach((content) =>{
+
+        works_box.classList.add("hide");
+      })
+
     };
     key.forEach((data) => data.addEventListener("click",filterContent));
   </script>
