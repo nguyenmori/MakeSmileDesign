@@ -1025,7 +1025,12 @@ body.fade::after {
   align-items: center;
 }
 
-.works_box .hide{
+.WORKS .works_box {
+  display: flex;
+  align-items: flex-start;
+}
+
+.works_box.hide {
   display: none;
 }
 

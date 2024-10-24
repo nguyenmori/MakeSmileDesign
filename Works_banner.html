@@ -116,7 +116,7 @@
         <p>制作実績</p>
       </div>
       <div class="Works">
-        <div class="works_box">
+        <div class="works_box" data-name="banner luxury Black red Instagram sample">
           <div class="works_img">
             <a href="./Works06_1.html"><img src="image/burger.luxury_WORKS.png" alt=""></a>
             <div class="around_text_box">
@@ -150,17 +150,17 @@
               </div>
             </div>
           </div>
-          <h3>バーガーショップさま</h3>
+          <h3>バーガーショップさま①</h3>
           <div class="key">
-            <p>バナー</p>
-            <p>高級感</p>
-            <p>黒</p>
-            <p>赤</p>
-            <p>Instagram</p>
-            <p>Sample</p>
+            <button  class="button" data-name="banner">バナー</button>
+            <button  class="button" data-name="luxury">高級感</button>
+            <button  class="button" data-name="Black">黒色</button>
+            <button  class="button" data-name="red">赤色</button>
+            <button  class="button" data-name="Instagram">Instagram</button>
+            <button class="button" data-name="sample">Sample</button>
           </div>
         </div>
-        <div class="works_box">
+        <div class="works_box" data-name="banner pop comic orange yellow sample">
           <div class="works_img">
             <a href="./Works06_2.html"><img src="image/burger.WORKS_.png" alt=""></a>
             <div class="around_text_box">
@@ -194,18 +194,18 @@
               </div>
             </div>
           </div>
-          <h3>バーガーショップさま</h3>
+          <h3>バーガーショップさま②</h3>
           <div class="key">
-            <p>バナー</p>
-            <p>POP</p>
-            <p>アメコミ</p>
-            <p>オレンジ色</p>
-            <p>黄色</p>
-            <p>Sample</p>
+            <button  class="button" data-name="banner">バナー</button>
+            <button  class="button" data-name="pop">POP</button>
+            <button  class="button" data-name="comic">アメコミ</button>
+            <button  class="button" data-name="orange">オレンジ色</button>
+            <button  class="button" data-name="yellow">黄色</button>
+            <button  class="button" data-name="sample">Sample</button>
           </div>
         </div>
-        <div class="works_box">
-          <div class="works_img">
+        <div class="works_box" data-name="banner pink Spring student cherry sample">
+          <div class="works_img" >
             <a href="./Works04.html"><img src="image/plan.banner_WORKS.png" alt=""></a>
             <div class="around_text_box">
               <div class="around_text_block block1">
@@ -240,15 +240,15 @@
           </div>
           <h3>デザスタmobileさま</h3>
           <div class="key">
-            <p>バナー</p>
-            <p>ピンク色</p>
-            <p>春</p>
-            <p>明るい</p>
-            <p>訴求</p>
-            <p>Sample</p>
+            <button  class="button" data-name="banner">バナー</button>
+            <button  class="button" data-name="pink">ピンク色</button>
+            <button  class="button" data-name="Spring">春</button>
+            <button  class="button" data-name="student">学生</button>
+            <button  class="button" data-name="cherry">桜</button>
+            <button  class="button" data-name="sample">Sample</button>
           </div>
         </div>
-        <div class="works_box">
+        <div class="works_box" data-name="banner orange trip brown simple sample">
           <div class="works_img">
             <a href="./Works05.html"><img src="image/TRRRRIP.banner_WORKS.png" alt=""></a>
             <div class="around_text_box">
@@ -284,15 +284,15 @@
           </div>
           <h3>TRRRRIP.さま</h3>
           <div class="key">
-            <p>バナー</p>
-            <p>オレンジ色</p>
-            <p>旅行</p>
-            <p>シンプル</p>
-            <p>キャンプ</p>
-            <p>Sample</p>
+            <button  class="button" data-name="banner">バナー</button>
+            <button  class="button" data-name="orange">オレンジ色</button>
+            <button  class="button" data-name="trip">旅行</button>
+            <button  class="button" data-name="brown">茶色</button>
+            <button  class="button" data-name="simple">シンプル</button>
+            <button class="button" data-name="sample">Sample</button>
           </div>
         </div>
-        <div class="works_box">
+        <div class="works_box" data-name="banner HANABI summer purple competition works">
           <div class="works_img">
             <a href="./Works07.html"><img src="image/HANABI_WORKES.png" alt=""></a>
             <div class="around_text_box">
@@ -328,12 +328,14 @@
           </div>
           <h3>株式会社irisさま</h3>
           <div class="key">
-            <p>バナー</p>
-            <p>花火</p>
-            <p>夏</p>
-            <p>紫</p>
-            <p>イベント</p>
-            <p>works</p>
+            <button class="button" data-name="banner">バナー</button>
+            <button 
+             class="button" data-name="HANABI">花火</button>
+            <button class="button" data-name="summer">夏</button>
+            <button  class="button" data-name="purple">紫色</button>
+            <button  class="button" data-name="competition">コンペ</button>
+            <button 
+             class="button" data-name="works">Works</button>
           </div>
         </div>
       </div>
@@ -497,6 +499,28 @@ $(function() {
     function msgdsp() {
            alert("現在検索機能は実装されてません。");
        }
+       const key = document.querySelectorAll(".button");
+    const works_box = document.querySelectorAll(".works_box");
+
+    console.log(key);
+    console.log(works_box);
+
+    const filterContent = (e) => {
+      const activeItem = document.querySelector(".active")
+      if (activeItem) {
+        activeItem.classList.remove("active");
+      }
+      e.target.classList.add("active");
+
+      works_box.forEach((content) => {
+
+        content.classList.add("hide");
+        if(content.dataset.name.indexOf(e.target.dataset.name) > -1){
+          content.classList.remove("hide");
+        }
+      })
+    };
+    key.forEach((data) => data.addEventListener("click", filterContent));
   </script>
 </body>
 

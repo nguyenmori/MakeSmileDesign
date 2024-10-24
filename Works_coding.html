@@ -116,7 +116,7 @@
         <p>制作実績</p>
       </div>
       <div class="Works">
-        <div class="works_box">
+        <div class="works_box" data-name="coding beige LP cafee simple sample">
           <div class="works_img">
             <a href="./Works03.html"><img src="image/design_cafe_WORKES.png" alt=""></a>
             <div class="around_text_box">
@@ -152,15 +152,15 @@
           </div>
           <h3>Design CAFEさま</h3>
           <div class="key">
-            <p>コーディング</p>
-            <p>カフェ</p>
-            <p>ベージュ色</p>
-            <p>LP</p>
-            <p>シンプル</p>
-            <p>Sample</p>
+            <button  class="button" data-name="coding">コーディング</button>
+            <button class="button" data-name="beige">ベージュ色</button>
+            <button  class="button" data-name="LP">LP</button>
+            <button  class="button" data-name="cafee">カフェ</button>
+            <button  class="button" data-name="simple">シンプル</button>
+            <button class="button" data-name="sample">Sample</button>
           </div>
         </div>
-        <div class="works_box">
+        <div class="works_box" data-name="HP pink POP coding responsive Works">
           <div class="works_img">
             <a href="./Works00.html"><img src="image/portfolio_WORKES_@2x.png" alt=""></a>
             <div class="around_text_box">
@@ -196,12 +196,12 @@
           </div>
           <h3>Make Smile Design</h3>
           <div class="key">
-            <p>HP</p>
-            <p>ピンク</p>
-            <p>POP</p>
-            <p>コーディング</p>
-            <p>レスポンシブ</p>
-            <p>Works</p>
+            <button  class="button" data-name="HP">HP</button>
+            <button  class="button" data-name="pink">ピンク色</button>
+            <button  class="button" data-name="pop">POP</button>
+            <button  class="button" data-name="coding">コーディング</button>
+            <button  class="button" data-name="responsive">レスポンシブ</button>
+            <button class="button" data-name="Works">Works</button>
           </div>
         </div>
       </div>
@@ -365,6 +365,28 @@ $(function() {
     function msgdsp() {
            alert("現在検索機能は実装されてません。");
        }
+       const key = document.querySelectorAll(".button");
+    const works_box = document.querySelectorAll(".works_box");
+
+    console.log(key);
+    console.log(works_box);
+
+    const filterContent = (e) => {
+      const activeItem = document.querySelector(".active")
+      if (activeItem) {
+        activeItem.classList.remove("active");
+      }
+      e.target.classList.add("active");
+
+      works_box.forEach((content) => {
+
+        content.classList.add("hide");
+        if(content.dataset.name.indexOf(e.target.dataset.name) > -1){
+          content.classList.remove("hide");
+        }
+      })
+    };
+    key.forEach((data) => data.addEventListener("click", filterContent));
   </script>
 </body>
 
