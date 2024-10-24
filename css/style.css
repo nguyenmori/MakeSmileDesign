@@ -2061,6 +2061,10 @@ h2 {
   margin-bottom: 80px;
   margin-left: 45px;
 }
+.Works_title{
+  margin-bottom: 0
+  ;
+}
 
 .AboutMe_title h2,
 .Skills_titel h2,
@@ -2462,11 +2466,17 @@ h2 {
   border-radius: 40px;
   border: 1px solid#1f1e00;
 }
-.skill_key{
+
+.skill_key {
   display: flex;
   flex-wrap: wrap;
   width: 40%;
   gap: 10px;
+}
+
+.Works00 .skill_key {
+  flex-direction: column;
+  width: fit-content;
 }
 
 .photoshop {

@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 html,
 body,
 h1,
@@ -100,6 +101,7 @@ body::-webkit-scrollbar-thumb {
 .concept,
 .Works_container,
 .Works_Content,
+.Works_content_block,
 .contact_container,
 .AboutMe,
 .Skills,
@@ -121,6 +123,7 @@ body::-webkit-scrollbar-thumb {
   .main_container,
   .concept,
   .Works_container,
+  .Works_content_block,
   .contact_container,
   .AboutMe,
   .Skills,
@@ -129,7 +132,7 @@ body::-webkit-scrollbar-thumb {
     max-width: 980px;
     margin: 100px auto;
   }
-  .Works_Content{
+  .Works_Content {
     max-width: 980px;
   }
 }
@@ -137,7 +140,6 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 980px) {
   .concept,
   .Works_container,
-
   .contact_container,
   .faq_container {
     margin: 100px 10px;
