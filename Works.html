@@ -727,15 +727,17 @@
     console.log(works_box);
 
     const filterContent = (e) => {
-      document.querySelector(".active").classList.remove("active");
+      const activeItem = document.querySelector(".active")
+      if (activeItem) {
+        activeItem.classList.remove("active");
+      }
       e.target.classList.add("active");
 
       works_box.forEach((content) => {
 
-        works_box.classList.add("hide");
-
-        if(works_box.dataset.name === e.target/dataset.name){
-          works_box.classList.remove("hide");
+        content.classList.add("hide");
+        if(content.dataset.name.indexOf(e.target.dataset.name) > -1){
+          content.classList.remove("hide");
         }
       })
     };

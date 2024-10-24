@@ -1025,6 +1025,10 @@ body.fade::after {
   align-items: center;
 }
 
+.works_box .hide{
+  display: none;
+}
+
 .works_img {
   width: 300px;
   height: 300px;
@@ -2060,10 +2064,6 @@ h2 {
   align-items: baseline;
   margin-bottom: 80px;
   margin-left: 45px;
-}
-.Works_title{
-  margin-bottom: 0
-  ;
 }
 
 .AboutMe_title h2,
