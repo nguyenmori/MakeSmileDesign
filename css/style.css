@@ -1528,6 +1528,7 @@ h2 {
   display: flex;
   gap: 20px;
   margin: 20px auto;
+  flex-wrap: wrap;
 }
 
 .sub_navi_block ul .key_box {

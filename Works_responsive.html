@@ -68,18 +68,10 @@
       </div>
       <nav class="nav open">
         <ul>
-          <li><a href="./aboutme.html">
-              <p class="nav_title"><span>私について</span><span>About Me</span></p>
-            </a></li>
-          <li><a href="./Works.html">
-              <p class="nav_title"><span>制作実績</span><span>Works</span></p>
-            </a></li>
-          <li><a href="./FAQ.html">
-              <p class="nav_title"><span>ご依頼について</span><span>FAQ</span></p>
-            </a></li>
-          <li><a href="./contact.html">
-              <p class="nav_title"><span>お問い合わせ</span><span>Contact</span></p>
-            </a></li>
+          <li><a href="./aboutme.html"><p class="nav_title"><span>私について</span><span>About Me</span></p></a></li>
+          <li><a href="./Works.html"><p class="nav_title"><span>制作実績</span><span>Works</span></p></a></li>
+          <li><a href="./FAQ.html"><p class="nav_title"><span>ご依頼について</span><span>FAQ</span></p></a></li>
+          <li><a href="./contact.html"><p class="nav_title"><span>お問い合わせ</span><span>Contact</span></p></a></li>
           <li class="sns_box"><a href="https://www.instagram.com/nguyenm_atz/" target="_blank"><img
                 src="image/Instagram.svg" alt="" class="sns"></a><a href="https://x.com/NgyenM_azt1412"
               target="_blank"><img src="image/X.svg" alt="" class="sns"></a></li>
@@ -125,7 +117,7 @@
         <p>制作実績</p>
       </div>
       <div class="Works">
-        <div class="works_box hide" data-name="HP pink POP coding responsive Works">
+        <div class="works_box " data-name="HP pink POP coding responsive Works">
           <div class="works_img">
             <a href="./Works00.html"><img src="image/portfolio_WORKES_@2x.png" alt=""></a>
             <div class="around_text_box">
@@ -345,7 +337,7 @@
             <button class="button" data-name="sample">Sample</button>
           </div>
         </div>
-        <div class="works_box" data-name="coding beige LP cafee simple sample">
+        <div class="works_box hide" data-name="coding beige LP cafee simple sample">
           <div class="works_img">
             <a href="./Works03.html"><img src="image/design_cafe_WORKES.png" alt=""></a>
             <div class="around_text_box">
@@ -433,7 +425,7 @@
             <button class="button" data-name="sample">Sample</button>
           </div>
         </div>
-        <div class="works_box " data-name="LP pink woman beauty simple sample">
+        <div class="works_box hide" data-name="LP pink woman beauty simple sample">
           <div class="works_img">
             <a href="./Works02.html"><img src="image/salon.LP_WORKES.png" alt=""></a>
             <div class="around_text_box">
@@ -631,7 +623,7 @@
     <div class="nico1 nico_footer"><img src="./image/nico.svg" alt=""></div>
   </footer>
   <script>
-    const today = new Date();
+        const today = new Date();
     const weekday = ["Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat."];
     // 年・月・日・曜日を取得
     const y = today.getFullYear();
@@ -651,23 +643,23 @@
     });
   </script>
   <script>
-    $(window).on('load', function () {
-      $('body').removeClass('fade');
-    });
-    $(function () {
-      // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
-      $('a:not([href^="#"]):not([target])').on('click', function (e) {
-        e.preventDefault(); // ナビゲートをキャンセル
-        url = $(this).attr('href'); // 遷移先のURLを取得
-        if (url !== '') {
-          $('body').addClass('fade'); // bodyに class="fadeout"を挿入
-          setTimeout(function () {
-            window.location = url; // 0.8秒後に取得したURLに遷移
-          }, 800);
-        }
-        return false;
-      });
-    });
+    $(window).on('load', function(){
+  $('body').removeClass('fade');
+});
+$(function() {
+  // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
+  $('a:not([href^="#"]):not([target])').on('click', function(e){
+    e.preventDefault(); // ナビゲートをキャンセル
+    url = $(this).attr('href'); // 遷移先のURLを取得
+    if (url !== '') {
+      $('body').addClass('fade'); // bodyに class="fadeout"を挿入
+      setTimeout(function(){
+        window.location = url; // 0.8秒後に取得したURLに遷移
+      }, 800);
+    }
+    return false;
+  });
+});
     jQuery.noConflict();
     (function ($) {
 
@@ -696,9 +688,9 @@
 
     }(jQuery));
     function msgdsp() {
-      alert("現在検索機能は実装されてません。");
-    }
-    const key = document.querySelectorAll(".button");
+           alert("現在検索機能は実装されてません。");
+       }
+       const key = document.querySelectorAll(".button");
     const works_box = document.querySelectorAll(".works_box");
 
     console.log(key);
@@ -714,7 +706,7 @@
       works_box.forEach((content) => {
 
         content.classList.add("hide");
-        if (content.dataset.name.indexOf(e.target.dataset.name) > -1) {
+        if(content.dataset.name.indexOf(e.target.dataset.name) > -1){
           content.classList.remove("hide");
         }
       })
