@@ -2476,7 +2476,6 @@ h2 {
 .skill_key {
   display: flex;
   flex-wrap: wrap;
-  width: 40%;
   gap: 10px;
 }
 
@@ -2571,6 +2570,10 @@ h2 {
 
 .Works_images img {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+.Works_images  .card_front,
+.Works_images  .card_back{
+  box-shadow:none;
 }
 .works_sp {
   display: none;
